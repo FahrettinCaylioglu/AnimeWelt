@@ -18,6 +18,9 @@ header>img {
     display: flex;
     justify-content: center;
 
+    position: relative;
+    /* top: -30px; */
+
 }
 
 .menu-bar {
@@ -36,10 +39,57 @@ header>img {
 
 }
 
-.start-animation-section img{
+.start-animation-section img {
     width: 100%;
-    height: 100%;
+    height: 530px;
 }
+
+.animation-rectangle {
+    height: 530px;
+    background-color: rgba(241, 201, 83, 1);
+
+    position: relative;
+    animation: mymove 5s ;
+}
+
+@keyframes mymove {
+    0% {
+        top: 0px;
+        background: rgba(241, 201, 83, 1);
+        width: 100%;
+    }
+
+    50% {
+        top: 0px;
+        background: rgba(241, 201, 83, 1);
+        border-top-right-radius: 75% 50%;
+        border-bottom-right-radius: 10%;
+        width: 50%;
+    }
+
+    100% {
+        top: 0px;
+        background: rgba(241, 201, 83, 1);
+        border-top-right-radius: 75%  50%;
+        border-bottom-right-radius: 10%;
+        width: 30%;
+    }
+}
+/*
+.animation-circle {
+    height: 530px;
+    background-color: rgba(241, 201, 83, 1);
+
+    position: relative;
+    animation: infinit infinite;
+}
+
+@keyframes infinit {
+0%{
+    background-color: rgba(241, 201, 83, 1);
+
+} 
+} */
 
 .highlights-section {
     height: 760px;
@@ -100,7 +150,6 @@ header>img {
 
     transition: all 250ms ease-in-out;
 }
-
 
 .slider_a_element {
     width: calc(100% / 4);
