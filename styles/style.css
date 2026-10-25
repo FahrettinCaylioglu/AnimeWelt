@@ -21,19 +21,19 @@ header img {
 
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
-a:hover{
-    text-decoration-line:underline;
-    text-decoration-color:  rgba(241, 201, 83, 1);
+a:hover {
+    text-decoration-line: underline;
+    text-decoration-color: rgba(241, 201, 83, 1);
     text-decoration-style: wavy;
 }
 
-a:visited{
-    color:  rgba(241, 201, 83, 1);
+a:visited {
+    color: rgba(241, 201, 83, 1);
 }
 
 .menu-bar {
@@ -62,10 +62,10 @@ a:visited{
     background-color: rgba(241, 201, 83, 1);
 
     position: relative;
-    animation: mymove 5s;
+    animation: shrink 5s forwards;
 }
 
-@keyframes mymove {
+@keyframes shrink {
     0% {
         top: 0px;
         background: rgba(241, 201, 83, 1);
@@ -80,6 +80,15 @@ a:visited{
         width: 50%;
     }
 
+    75% {
+        top: 0px;
+        background: rgba(241, 201, 83, 1);
+        border-top-right-radius: 75% 50%;
+        border-bottom-right-radius: 10%;
+        width: 50%;
+    }
+
+
     100% {
         top: 0px;
         background: rgba(241, 201, 83, 1);
@@ -89,21 +98,73 @@ a:visited{
     }
 }
 
-/*
-.animation-circle {
-    height: 530px;
-    background-color: rgba(241, 201, 83, 1);
+.animation-circle img {
+    height: 16px;
+    width: 16px;
 
-    position: relative;
-    animation: infinit infinite;
 }
 
-@keyframes infinit {
-0%{
-    background-color: rgba(241, 201, 83, 1);
+.animation-circle {
+    height: 160px;
+    width: 160px;
 
-} 
-} */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    border-radius: 100%;
+    position: absolute;
+
+    z-index: 2;
+
+    top: 535px;
+    left: 500px;
+
+
+    transform: rotate(360deg);
+    transform-origin: 50% 50%;
+    animation: spin 5s forwards;
+}
+
+@keyframes spin {
+    0% {
+        transform: translateY(0px);
+        color: transparent;
+        opacity: 0;
+
+    }
+
+    25% {
+
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0;
+
+    }
+
+    50% {
+
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0;
+    }
+
+    75% {
+
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0;
+    }
+
+
+    100% {
+
+        transform: translateY(-150px) rotate(360deg);
+        background-color: rgba(78, 164, 135, 1);
+        color: rgba(241, 201, 83, 1);
+
+
+    }
+
+}
 
 .highlights-section {
     height: 760px;
@@ -154,6 +215,10 @@ a:visited{
     z-index: 2;
 
     background-color: rgba(226, 226, 214, 0.158);
+    border-inline-width: 0.5px;
+    border-inline-color: rgba(255, 255, 255, 0.5);
+    border-inline-style: solid solid;
+
     backdrop-filter: blur(5px);
 }
 
