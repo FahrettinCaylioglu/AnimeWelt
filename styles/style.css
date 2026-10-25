@@ -49,7 +49,7 @@ header>img {
     background-color: rgba(241, 201, 83, 1);
 
     position: relative;
-    animation: mymove 5s ;
+    animation: mymove 5s;
 }
 
 @keyframes mymove {
@@ -70,11 +70,12 @@ header>img {
     100% {
         top: 0px;
         background: rgba(241, 201, 83, 1);
-        border-top-right-radius: 75%  50%;
+        border-top-right-radius: 75% 50%;
         border-bottom-right-radius: 10%;
         width: 30%;
     }
 }
+
 /*
 .animation-circle {
     height: 530px;
@@ -118,6 +119,29 @@ header>img {
     flex-direction: column;
 
     gap: 24px;
+}
+
+.textbox_slider {
+    height: 40%;
+    /* (220px)*/
+    width: 75%;
+    /* (880px)*/
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    padding: 16px 24px;
+    gap: 8px;
+
+    position: absolute;
+    top: 55px;
+    left: 40px;
+
+    z-index: 2;
+
+    background-color: rgba(226, 226, 214, 0.158);
+    backdrop-filter: blur(5px);
 }
 
 .slider_a {
