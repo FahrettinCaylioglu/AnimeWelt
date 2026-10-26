@@ -2,10 +2,31 @@
         FAQ
 
 */
+
+.faq {
+    padding-left: 120px;
+    padding-right: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+.faq-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.faq-title img {
+    width: 48px;
+    height: 48px;
+}
+
 .faq-wrapper {
     border-radius: 12px;
     padding: 16px 14px;
-    background-color: #4c243e;
+    background-color: #94bcc5;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -35,10 +56,9 @@
 .answer-section {
     display: none;
     background-color: white;
-    max-height: 0;
     border-radius: 5px;
     padding: 4px 10px;
-    transition: all 1s ease-in-out;
+    animation: dropDown-unchecked 1s both ease-in-out;
 }
 
 /* box checked */
@@ -47,12 +67,70 @@
     display: block;
     will-change: max-height;
     max-height: 300em;
-    transition: all 1s ease;
+    animation: dropDown 1s both ease-in-out;
+}
+
+@keyframes dropDown {
+    0% {
+        opacity: 0;
+        background-color: #94bcc5;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        background-color: white;
+    }
+
+}
+
+
+
+
+@keyframes dropDown-unchecked {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
 }
 
 .faq-wrapper .arrow-box:checked+div>label>span {
     will-change: transform;
     transform: rotate(-180deg);
+}
+
+/*
+CONTACT FORM
+*/
+
+.contact-form-wrapper {
+    padding-left: 120px;
+    padding-right: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.contact-form-title img {
+    width: 36px;
+    height: 41px;
+}
+
+.contact-text {
+    text-align: center;
 }
 
 
