@@ -1,6 +1,10 @@
 .start-animation-section {
     height: 530px;
     background-color: rgb(163, 164, 78);
+    background-image: url(../assets/images/bild_four.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
 }
 
@@ -25,93 +29,74 @@
     animation: shrink 5s forwards;
 }
 
-
-
 @keyframes shrink {
     0% {
+        
+        transform: translateY(0px);
         background: rgba(241, 201, 83, 1);
         width: 100%;
     }
 
     25% {
+        transform: translateY(-40px);
         background: rgba(241, 201, 83, 1);
         width: 100%;
     }
 
     50% {
-
         background: rgba(241, 201, 83, 1);
-        width: 100%;
+        border-top-right-radius: 75% 50%;
+        border-bottom-right-radius: 10%;
+        width: 50%;
     }
 
     75% {
-        background: rgba(241, 201, 83, 1);
-        width: 100%;
+        transform: translateY(-100px);
+
     }
 
     100% {
-        top: 0px;
         background: rgba(241, 201, 83, 1);
-        border-top-right-radius: -25%;
-        border-bottom-right-radius: 10%;
+        width: 30%;
+
+    }
+}
+
+.animation-rectangle p h1 {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    animation: texts 5s forwards;
+}
+
+@keyframes texts {
+    0% {
+        transform: translateY(0px);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    75% {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px);
+        opacity: 1;
         width: 30%;
     }
 }
 
-.animation-rectangle h1 {
-    padding: 10px;
-
-
-    animation: title 2s forwards;
-}
-
-@keyframes title {
-    0% {
-        transform: translateY(0px);
-    }
-
-    25% {
-        transform: translateY(-40px);
-    }
-
-    75% {
-        transform: translateY(-40px);
-    }
-
-    100% {
-        transform: translateY(-40px);
-    }
-}
-
-.animation-rectangle p {
-    padding: 50px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    animation: text 2s forwards;
-}
-
-@keyframes text {
-    0% {
-        transform: translateY(0px);
-        opacity: 0;
-    }
-
-    25% {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-
-    75% {
-        transform: translateY(-100px);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(-100px);
-        opacity: 1;
-    }
-}
 
 .animation-circle img {
     height: 16px;
