@@ -137,54 +137,112 @@ CONTACT FORM
 /*
         FOOTER
 */
-.footer {
-    background-color: #94bcc5;
-    height: 150px;
-    padding-left: 120px;
-    padding-right: 120px;
-
-    font-size: 18px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer-log-imp {
-    min-width: 530px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+* {
+    margin: 0px;
+    box-sizing: border-box;
 
 }
 
-.footer-logo {
+html {
+    font-size: 16px;
+}
+
+
+header {
+    height: 128px;
+
     display: flex;
+    justify-content: flex-start;
     flex-direction: row;
     align-items: center;
-    gap: 4px;
+
+    background-color: rgba(78, 164, 135, 1);
+    color: white;
+
+    padding: 32px 0px 32px 145px;
+}
+
+header img {
+    height: 72px;
+    width: 72px;
+
+    display: flex;
+    justify-content: center;
 
 }
 
-.footer-impressum {
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration-line: underline;
+    text-decoration-color: rgba(241, 201, 83, 1);
+    text-decoration-style: wavy;
+}
+
+a:visited {
+    color: rgba(241, 201, 83, 1);
+}
+
+.menu-bar {
     display: flex;
+    justify-content: flex-start;
     flex-direction: row;
+
+    list-style-type: none;
+
     gap: 72px;
-}
 
-.footer-logo img {
-    width: 24px;
-    height: 24px;
-    align-items: center;
-}
+    .footer {
+        background-color: #94bcc5;
+        height: 150px;
+        padding-left: 120px;
+        padding-right: 120px;
 
-.footer-social-media {
-    display: flex;
-    gap: 10px;
-}
+        font-size: 18px;
 
-.footer-social-media img {
-    width: 32px;
-    height: 32px;
-}
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footer-log-imp {
+        min-width: 530px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .footer-logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4px;
+
+    }
+
+    .footer-impressum {
+        display: flex;
+        flex-direction: row;
+        gap: 72px;
+    }
+
+    .footer-logo img {
+        width: 24px;
+        height: 24px;
+        align-items: center;
+    }
+
+    .footer-social-media {
+        display: flex;
+        gap: 10px;
+    }
+
+    .footer-social-media img {
+        width: 32px;
+        height: 32px;
+    }
