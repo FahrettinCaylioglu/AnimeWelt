@@ -31,7 +31,7 @@
 
 @keyframes shrink {
     0% {
-        
+
         transform: translateY(0px);
         background: rgba(241, 201, 83, 1);
         width: 100%;
@@ -269,4 +269,268 @@
 
 input {
     margin: 0px 15px;
+}
+
+/*
+        FAQ
+
+*/
+
+.faq {
+    padding-top: 120px;
+    padding-left: 120px;
+    padding-right: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+.faq-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.faq-title img {
+    width: 48px;
+    height: 48px;
+}
+
+.faq-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.faq-question-wrapper {
+    border-radius: 12px;
+    padding: 16px 14px;
+    background-color: #94bcc5;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+}
+
+.faq-section label {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.question-section {
+    display: flex;
+    gap: 4px;
+}
+
+.arrow-box {
+    all: unset;
+}
+
+.arrow-icon {
+    margin-left: auto;
+    transition: transform 255ms ease-in-out;
+}
+
+.answer-section {
+    display: none;
+    background-color: white;
+    border-radius: 5px;
+    padding: 4px 10px;
+    animation: dropDown-unchecked 1s both ease-in-out;
+}
+
+/* box checked */
+
+.faq-question-wrapper .arrow-box:checked~.answer-section {
+    display: block;
+    will-change: max-height;
+    max-height: 300em;
+    animation: dropDown 1s both ease-in-out;
+}
+
+@keyframes dropDown {
+    0% {
+        opacity: 0;
+        background-color: #94bcc5;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        background-color: white;
+    }
+
+}
+
+
+
+
+@keyframes dropDown-unchecked {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+.faq-question-wrapper .arrow-box:checked+div>label>span {
+    will-change: transform;
+    transform: rotate(-180deg);
+}
+
+/*
+CONTACT FORM
+*/
+
+.contact-form-wrapper {
+    padding: 120px 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+.title-section {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.contact-form-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.contact-form-title img {
+    width: 36px;
+    height: 41px;
+}
+
+.contact-text {
+    text-align: center;
+}
+
+.data-section {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.customer-data {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 17px;
+    width: 100%;
+}
+
+.customer-data input,
+.customer-message input {
+    width: 100%;
+    margin: 0px;
+    padding-top: 15px;
+    padding-bottom: 17px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #222222;
+    outline: none;
+    font-size: 24px;
+    color: #94bcc5;
+}
+
+.label {
+    display: block;
+}
+
+.send-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.privacy-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 8px;
+}
+
+.privacy-container input {
+    position: absolute;
+    opacity: 0;
+}
+
+.privacy-checkbox {
+    position: relative;
+    height: 18px;
+    width: 18px;
+    border: solid 1px black;
+    border-radius: 4px;
+}
+
+.privacy-checkbox:hover {
+    background-color: #94bcc5;
+}
+
+#checkbox-id:checked~.privacy-checkbox {
+    background-color: #222222;
+
+}
+
+.privacy-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+#checkbox-id:checked~.privacy-checkbox::after {
+    display: block;
+}
+
+.privacy-checkbox:after {
+    left: 5px;
+    top: 0;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.privacy-button {
+    opacity: 0.5;
+    padding: 10px 24px;
+    border: solid 1px #303030;
+    border-radius: 40px;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.send-section:has(#checkbox-id:checked) .privacy-button {
+    opacity: 1;
+    background-color: #94bcc5;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.send-section:has(#checkbox-id:checked) .privacy-button:hover {
+    font-weight: bold;
+    border: solid 3px #303030;
 }
