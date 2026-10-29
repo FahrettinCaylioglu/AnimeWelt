@@ -1,3 +1,37 @@
+/* palanquin-dark-600 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Palanquin Dark';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/assets/fonts/palanquin-dark-v17-latin-600.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Palanquin';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/assets/fonts/palanquin-v17-latin-500.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* palanquin-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Palanquin';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/palanquin-v17-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* Animation Main Side */
+
 .start-animation-section {
     height: 530px;
     background-color: rgb(163, 164, 78);
@@ -23,7 +57,7 @@
 
     gap: 24px;
 
-    background-color: rgba(241, 201, 83, 1);
+    background-color: #976185;
 
     position: relative;
     animation: shrink 5s forwards;
@@ -33,18 +67,18 @@
     0% {
 
         transform: translateY(0px);
-        background: rgba(241, 201, 83, 1);
+        background: #976185;
         width: 100%;
     }
 
     25% {
         transform: translateY(-40px);
-        background: rgba(241, 201, 83, 1);
+        background: #976185;
         width: 100%;
     }
 
     50% {
-        background: rgba(241, 201, 83, 1);
+        background: #976185;
         border-top-right-radius: 75% 50%;
         border-bottom-right-radius: 10%;
         width: 50%;
@@ -56,7 +90,7 @@
     }
 
     100% {
-        background: rgba(241, 201, 83, 1);
+        background: #976185;
         width: 30%;
 
     }
@@ -151,11 +185,13 @@
 
     100% {
         transform: translateY(-150px) rotate(360deg);
-        background-color: rgba(78, 164, 135, 1);
-        color: rgba(241, 201, 83, 1);
+        background-color: #340e26;
+        color: #976185;
     }
 
 }
+
+/* Highlights section */
 
 .highlights-section {
     height: 760px;
@@ -211,6 +247,12 @@
     border-inline-style: solid solid;
 
     backdrop-filter: blur(5px);
+}
+
+.textbox_slider h2 {
+    font-family: 'Palanquin Dark';
+    font-size: 3rem;
+    color: #340e26;
 }
 
 .slider_a {
@@ -271,10 +313,7 @@ input {
     margin: 0px 15px;
 }
 
-/*
-        FAQ
-
-*/
+/* FAQ */
 
 .faq {
     padding-top: 120px;
@@ -306,11 +345,16 @@ input {
 .faq-question-wrapper {
     border-radius: 12px;
     padding: 16px 14px;
-    background-color: #94bcc5;
+    background-color: #976185;
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
 
+.faq-question-wrapper h4 {
+    color: #340e26;
+    font-family: 'Palanquin';
+    font-size: 1.5rem;
 }
 
 .faq-section label {
@@ -339,6 +383,8 @@ input {
     border-radius: 5px;
     padding: 4px 10px;
     animation: dropDown-unchecked 1s both ease-in-out;
+
+    font-family: 'Palanquin';
 }
 
 /* box checked */
@@ -382,7 +428,6 @@ input {
 }
 
 .faq-question-wrapper .arrow-box:checked+div>label>span {
-    will-change: transform;
     transform: rotate(-180deg);
 }
 
@@ -519,7 +564,6 @@ CONTACT FORM
     padding: 10px 24px;
     border: solid 1px #303030;
     border-radius: 40px;
-    cursor: not-allowed;
     pointer-events: none;
 }
 

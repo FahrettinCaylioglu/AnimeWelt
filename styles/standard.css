@@ -1,14 +1,54 @@
-/*
-        FOOTER
-*/
+/* FONTS */
+
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Palanquin Dark';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/palanquin-dark-v17-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* palanquin-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Palanquin-400';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/palanquin-v17-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Arima';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/arima-v7-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 * {
     margin: 0px;
     box-sizing: border-box;
-
 }
 
 html {
     font-size: 16px;
+}
+
+h1 {
+    font-family: 'Arima';
+    font-size: 4rem;
+    color: #340e26;
+}
+
+p {
+    font-family: 'Palanquin-400';
+    font-size: 1.5rem;
 }
 
 
@@ -20,10 +60,12 @@ header {
     flex-direction: row;
     align-items: center;
 
-    background-color: rgba(78, 164, 135, 1);
+    background-color: #340e26;
     color: white;
 
     padding: 32px 0px 32px 145px;
+
+    font-family: 'Arima';
 }
 
 header img {
@@ -32,6 +74,7 @@ header img {
 
     display: flex;
     justify-content: center;
+    border-radius: 50%;
 
 }
 
@@ -42,12 +85,8 @@ a {
 
 a:hover {
     text-decoration-line: underline;
-    text-decoration-color: rgba(241, 201, 83, 1);
+    text-decoration-color: #976185;
     text-decoration-style: wavy;
-}
-
-a:visited {
-    color: rgba(241, 201, 83, 1);
 }
 
 .menu-bar {
@@ -60,13 +99,19 @@ a:visited {
     gap: 72px;
 }
 
+/*
+        FOOTER
+*/
+
 .footer {
-    background-color: #94bcc5;
+    background-color: #340e26;
     height: 150px;
     padding-left: 120px;
     padding-right: 120px;
 
-    font-size: 18px;
+    font-family: 'Palanquin-400';
+    font-size: 1.15rem;
+    color: #FFF;
 
     display: flex;
     align-items: center;
@@ -94,6 +139,10 @@ a:visited {
     display: flex;
     flex-direction: row;
     gap: 72px;
+}
+
+.footer-impressum p {
+    font-size: 1.15rem;
 }
 
 .footer-logo img {
