@@ -9,10 +9,22 @@
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* palanquin-regular - latin */
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Palanquin';
+    font-family: 'Palanquin-400';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/palanquin-v17-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* palanquin-500 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Palanquin-500';
     font-style: normal;
     font-weight: 500;
     src: url('/assets/fonts/palanquin-v17-latin-500.woff2') format('woff2');
@@ -23,7 +35,7 @@
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Palanquin';
+    font-family: 'Palanquin-700';
     font-style: normal;
     font-weight: 700;
     src: url('/assets/fonts/palanquin-v17-latin-700.woff2') format('woff2');
@@ -353,7 +365,7 @@ input {
 
 .faq-question-wrapper h4 {
     color: #340e26;
-    font-family: 'Palanquin';
+    font-family: 'Palanquin-700';
     font-size: 1.5rem;
 }
 
@@ -383,8 +395,7 @@ input {
     border-radius: 5px;
     padding: 4px 10px;
     animation: dropDown-unchecked 1s both ease-in-out;
-
-    font-family: 'Palanquin';
+    font-family: 'Palanquin-500';
 }
 
 /* box checked */
@@ -412,8 +423,6 @@ input {
     }
 
 }
-
-
 
 
 @keyframes dropDown-unchecked {
@@ -477,12 +486,17 @@ CONTACT FORM
     gap: 40px;
 }
 
+.customer-message {
+    font-family: 'Palanquin-500';
+}
+
 .contact {
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 17px;
     width: 100%;
+    font-family: 'Palanquin-500';
 }
 
 .customer-data input,
@@ -495,8 +509,9 @@ CONTACT FORM
     border: none;
     border-bottom: 1px solid #222222;
     outline: none;
-    font-size: 24px;
-    color: #94bcc5;
+    font-size: 1.5rem;
+    font-family: 'Palanquin-500';
+    color: #340e26;
 }
 
 .label {
@@ -515,6 +530,20 @@ CONTACT FORM
     align-items: center;
     flex-direction: row-reverse;
     gap: 8px;
+
+}
+
+.privacy-text {
+    font-family: 'Palanquin-400';
+    font-size: 1rem;
+}
+
+.privacy-text a {
+    color: #976185;
+}
+
+.privacy-text a:hover {
+    text-decoration: none;
 }
 
 .privacy-container input {
