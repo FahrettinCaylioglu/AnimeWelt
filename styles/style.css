@@ -33,7 +33,7 @@
 
 @keyframes shrink {
     0% {
-            background-image: url(../assets/images/yellow_1.png);
+        background-image: url(../assets/images/yellow_1.png);
         height: 530px;
         width: 100%;
 
@@ -350,10 +350,27 @@
     transform: translateX(calc(-150% /4));
 }
 
-input {
-    margin: 0px 15px;
+input[type=radio] {
+    
+    -webkit-appearance: none;
+
+    height: 28px;
+    width: 28px;
+
+    margin-bottom: 45px;
+
+    background-color: white;
+    border-radius: 50%;
 }
 
+input[type=radio]:checked {
+
+
+    background: rgba(241, 201, 83, 1);
+    border-radius: 20px;
+    width: 40px;
+
+}
 
 @media screen and (min-width: 1440px) {
 
