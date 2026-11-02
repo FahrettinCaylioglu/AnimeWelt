@@ -1,150 +1,86 @@
-/*
-        FAQ
-
-*/
-
-.faq {
-    padding-left: 120px;
-    padding-right: 120px;
-    display: flex;
-    flex-direction: column;
-    gap: 56px;
+/* FONTS */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Palanquin Dark';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/palanquin-dark-v17-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.faq-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+/* palanquin-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Palanquin-400';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/palanquin-v17-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.faq-title img {
-    width: 48px;
-    height: 48px;
+/* palanquin-600 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Palanquin-600';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/assets/fonts/palanquin-v17-latin-600.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.faq-wrapper {
-    border-radius: 12px;
-    padding: 16px 14px;
-    background-color: #94bcc5;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Arima-400';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/arima-v7-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.faq-section label {
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Arima-700';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/arima-v7-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.question-section {
-    display: flex;
-    gap: 4px;
-}
-
-.arrow-box {
-    all: unset;
-}
-
-.arrow-icon {
-    margin-left: auto;
-    transition: transform 255ms ease-in-out;
-}
-
-.answer-section {
-    display: none;
-    background-color: white;
-    border-radius: 5px;
-    padding: 4px 10px;
-    animation: dropDown-unchecked 1s both ease-in-out;
-}
-
-/* box checked */
-
-.faq-wrapper .arrow-box:checked~.answer-section {
-    display: block;
-    will-change: max-height;
-    max-height: 300em;
-    animation: dropDown 1s both ease-in-out;
-}
-
-@keyframes dropDown {
-    0% {
-        opacity: 0;
-        background-color: #94bcc5;
-    }
-
-    50% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 1;
-        background-color: white;
-    }
-
-}
-
-
-
-
-@keyframes dropDown-unchecked {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-
-}
-
-.faq-wrapper .arrow-box:checked+div>label>span {
-    will-change: transform;
-    transform: rotate(-180deg);
-}
-
-/*
-CONTACT FORM
-*/
-
-.contact-form-wrapper {
-    padding-left: 120px;
-    padding-right: 120px;
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-form-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-}
-
-.contact-form-title img {
-    width: 36px;
-    height: 41px;
-}
-
-.contact-text {
-    text-align: center;
-}
-
-
-/*
-        FOOTER
-*/
 * {
     margin: 0px;
     box-sizing: border-box;
-
 }
 
 html {
     font-size: 16px;
+}
+
+h1 {
+    font-family: 'Arima-700';
+    font-size: 4rem;
+    color: #976185;
+}
+
+h2 {
+    font-family: 'Arima-700';
+    font-size: 4rem;
+    color: #340e26;
+}
+
+h4 {
+    font-family: 'Palanquin-600';
+    font-size: 2.5rem;
+    color: #340e26;
+}
+
+p {
+    font-family: 'Palanquin-400';
+    font-size: 1.5rem;
 }
 
 
@@ -156,10 +92,12 @@ header {
     flex-direction: row;
     align-items: center;
 
-    background-color: rgba(78, 164, 135, 1);
+    background-color: #340e26;
     color: white;
 
     padding: 32px 0px 32px 145px;
+
+    font-family: 'Arima-700';
 }
 
 header img {
@@ -168,6 +106,7 @@ header img {
 
     display: flex;
     justify-content: center;
+    border-radius: 50%;
 
 }
 
@@ -178,12 +117,8 @@ a {
 
 a:hover {
     text-decoration-line: underline;
-    text-decoration-color: rgba(241, 201, 83, 1);
+    text-decoration-color: #976185;
     text-decoration-style: wavy;
-}
-
-a:visited {
-    color: rgba(241, 201, 83, 1);
 }
 
 .menu-bar {
@@ -196,13 +131,19 @@ a:visited {
     gap: 72px;
 }
 
+/*
+        FOOTER
+*/
+
 .footer {
-    background-color: #94bcc5;
+    background-color: #340e26;
     height: 150px;
     padding-left: 120px;
     padding-right: 120px;
 
-    font-size: 18px;
+    font-family: 'Palanquin-400';
+    font-size: 1.15rem;
+    color: #FFF;
 
     display: flex;
     align-items: center;
@@ -232,6 +173,10 @@ a:visited {
     gap: 72px;
 }
 
+.footer-impressum p {
+    font-size: 1.15rem;
+}
+
 .footer-logo img {
     width: 24px;
     height: 24px;
@@ -246,4 +191,52 @@ a:visited {
 .footer-social-media img {
     width: 32px;
     height: 32px;
+}
+
+/* Author part */
+
+.author-title-section {
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.author-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.author-info {
+    background-color: #340e267c;
+    max-width: 270px;
+    max-height: 390px;
+    border-radius: 30px;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.author-info-text>p {
+    font-family: 'Palanquin-400';
+    font-size: 1rem;
+}
+
+.author-info img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50px;
+}
+
+.a-name {
+    font-family: 'Arima-700';
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.a-job {
+    font-family: 'Arima-400';
+    font-size: 1.1rem;
+    text-align: center;
 }
