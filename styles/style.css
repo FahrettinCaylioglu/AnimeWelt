@@ -325,6 +325,25 @@ input {
     margin: 0px 15px;
 }
 
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    
+    background: white;
+
+    margin-bottom: 45px;
+}
+
+input[type="radio"]:checked {
+    background: #976185;
+    width: 40px;
+    border-radius: 20px;
+}
+
 /* FAQ */
 
 .faq {
