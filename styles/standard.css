@@ -208,7 +208,7 @@ a:hover {
 .author-info {
     background-color: #340e267c;
     max-width: 270px;
-    max-height: 390px;
+    max-height: 400px;
     border-radius: 30px;
     padding: 16px;
 
@@ -221,6 +221,8 @@ a:hover {
 .author-info-text>p {
     font-family: 'Palanquin-400';
     font-size: 1rem;
+    letter-spacing: 0%;
+    line-height: 120%;
 }
 
 .author-info img {
@@ -239,4 +241,9 @@ a:hover {
     font-family: 'Arima-400';
     font-size: 1.1rem;
     text-align: center;
+}
+
+.title-article>p {
+    font-size: 1.75rem;
+    line-height: 110%;
 }
