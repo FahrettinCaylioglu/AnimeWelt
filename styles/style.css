@@ -565,10 +565,14 @@ input[type="radio"]:checked {
 .button_section img{
 position: absolute;
 
-top: 470px;
-left: 540px;
+top: 510px;
+left: 39%;
 
-rotate: 365deg;
+rotate: 0deg;
+}
+
+.button_section p{
+    text-align: center;
 }
 
 li {
