@@ -473,7 +473,7 @@ input[type="radio"]:checked {
     padding: 60px 32px;
 }
 
-.text_info{
+.text_info {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -532,7 +532,7 @@ input[type="radio"]:checked {
     font-size: 28px;
 }
 
-.button_section{
+.button_section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -541,18 +541,24 @@ input[type="radio"]:checked {
     gap: 45px;
 }
 
-.share_button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-
+.share_button {
     height: 50px;
     width: 150px;
 
     border-radius: 40px;
     padding: 0px 24px;
 
+    color: white;
+    background-color: #340e26;
+    text-decoration:underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #976185;
+    display:inline-block;
+}
+
+.share_button:hover {
+    text-decoration-color: #976185;
+    color: white;
     background-color: #976185;
 }
 
