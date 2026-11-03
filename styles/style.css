@@ -562,6 +562,15 @@ input[type="radio"]:checked {
     background-color: #976185;
 }
 
+.button_section img{
+position: absolute;
+
+top: 470px;
+left: 540px;
+
+rotate: 365deg;
+}
+
 li {
     font-size: 24px;
 }
