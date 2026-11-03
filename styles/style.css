@@ -421,6 +421,7 @@ input[type="radio"]:checked {
     border-radius: 20px;
 }
 
+/* carousel */
 .carousel {
     display: flex;
 
@@ -464,6 +465,53 @@ input[type="radio"]:checked {
 
 .slider_b_element:hover~.slider_b_element {
     transform: perspective(320px) rotateY(-20deg) translateX(20px);
+}
+
+.carousel p {
+    text-align: center;
+}
+
+
+.tipp_box {
+    height: 200px;
+    width: 1000px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+    left: 25%;
+    padding: 25px 16px;
+
+    border-radius: 30px;
+    background-color: #97618569;
+}
+
+.tipp_smallbox {
+    height: 65px;
+    width: 200px;
+
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    top: -50px;
+    left: -30px;
+    rotate: -15deg;
+
+    border-radius: 10px;
+    background-color: #340e26;
+}
+
+.tipp_smallbox p {
+    color: #976185;
+    font-size: 28px;
+}
+
+li{
+    font-size: 24px;
 }
 
 /* FAQ */
