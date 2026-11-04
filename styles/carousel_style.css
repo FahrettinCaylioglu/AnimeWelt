@@ -28,8 +28,7 @@
         0px 14px 11px rgba(3, 7, 18, 0.05),
         0px 32px 24px rgba(3, 7, 18, 0.08);
 
-
-    transform: perspective(320px) rotateY(20deg) translateX(-20px);
+    transform: perspective(250px) rotateY(20deg) translateX(-80px);
     transform-origin: 50% 50%;
 
     transition: all 250ms ease-in-out;
