@@ -142,7 +142,7 @@
 position: absolute;
 
 top: 510px;
-left: 39%;
+left: 500px;
 
 rotate: 0deg;
 }
@@ -153,4 +153,7 @@ rotate: 0deg;
 
 li {
     font-size: 24px;
+}
+.article_1 {
+    padding-top: 80px;
 }
