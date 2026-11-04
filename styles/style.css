@@ -560,11 +560,11 @@ CONTACT FORM
 }
 
 .privacy-checkbox:hover {
-    background-color: #94bcc5;
+    background-color: #cc96ba65;
 }
 
 #checkbox-id:checked~.privacy-checkbox {
-    background-color: #222222;
+    background-color: #340e26;
 
 }
 
@@ -583,7 +583,7 @@ CONTACT FORM
     top: 0;
     width: 5px;
     height: 10px;
-    border: solid white;
+    border: solid #d38ebc;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
 }
@@ -594,16 +594,19 @@ CONTACT FORM
     border: solid 1px #303030;
     border-radius: 40px;
     pointer-events: none;
+
 }
 
 .send-section:has(#checkbox-id:checked) .privacy-button {
     opacity: 1;
-    background-color: #94bcc5;
+    background-color: #d38ebc;
+    border: none;
     cursor: pointer;
     pointer-events: all;
+    color: #fff;
 }
 
 .send-section:has(#checkbox-id:checked) .privacy-button:hover {
-    font-weight: bold;
-    border: solid 3px #303030;
+    transition: transform 300ms ease;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
 }
