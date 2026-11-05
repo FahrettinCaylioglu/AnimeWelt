@@ -221,7 +221,7 @@ a:hover {
 }
 
 .author-info {
-    background-color: #340e267c;
+    background-color: var(--box-light-purple);
     max-width: 270px;
     max-height: 400px;
     border-radius: 30px;
