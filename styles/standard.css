@@ -60,29 +60,36 @@ html {
     font-size: 16px;
 }
 
+:root{
+    --color-purple: #340e26;
+    --color-light-purple:#976185;
+   --box-light-purple: #97618569;
+}
+
 h1 {
     font-family: 'Arima-700';
     font-size: 4rem;
-    color: #976185;
+    color: var(--color-light-purple);
+    
 }
 
 h2 {
     font-family: 'Arima-700';
     font-size: 4rem;
-    color: #340e26;
+    color: var(--color-purple);
 }
 
 h4 {
     font-family: 'Palanquin-600';
     font-size: 2.5rem;
-    color: #340e26;
+    color: var(--color-purple);
 }
 
 h3 {
 
     font-family: 'Palanquin-600';
     font-size: 2.5rem;
-    color: #340e26;
+    color: var(--color-purple);
 
 }
 
@@ -99,7 +106,7 @@ header {
     flex-direction: row;
     align-items: center;
 
-    background-color: #340e26;
+    background-color: var(--color-purple);
     color: white;
 
     padding: 32px 0px 32px 145px;
@@ -124,7 +131,7 @@ a {
 
 a:hover {
     text-decoration-line: underline;
-    text-decoration-color: #976185;
+    text-decoration-color: var(--color-light-purple);
     text-decoration-style: wavy;
 }
 
@@ -143,14 +150,14 @@ a:hover {
 */
 
 .footer {
-    background-color: #340e26;
+    background-color: var(--color-purple);;
     height: 150px;
     padding-left: 120px;
     padding-right: 120px;
 
     font-family: 'Palanquin-400';
     font-size: 1.15rem;
-    color: #FFF;
+    color: white;
 
     display: flex;
     align-items: center;

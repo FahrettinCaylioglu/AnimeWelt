@@ -84,7 +84,7 @@
     padding: 25px 16px;
 
     border-radius: 30px;
-    background-color: #97618569;
+    background-color: var(--box-light-purple);
 }
 
 .tipp_smallbox {
@@ -100,11 +100,11 @@
     rotate: -15deg;
 
     border-radius: 10px;
-    background-color: #340e26;
+    background-color: var(--color-purple);
 }
 
 .tipp_smallbox p {
-    color: #976185;
+    color: var(--color-light-purple);
     font-size: 28px;
 }
 
@@ -125,17 +125,17 @@
     padding: 0px 24px;
 
     color: white;
-    background-color: #340e26;
+    background-color: var(--color-purple);
     text-decoration:underline;
     text-decoration-style: wavy;
-    text-decoration-color: #976185;
+    text-decoration-color: var(--color-light-purple);
     display:inline-block;
 }
 
 .share_button:hover {
-    text-decoration-color: #976185;
+    text-decoration-color: var(--color-light-purple);
     color: white;
-    background-color: #976185;
+    background-color: var(--color-light-purple);
 }
 
 .button_section img{
