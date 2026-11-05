@@ -398,6 +398,14 @@
     transform: translateX(calc(-150% /4));
 }
 
+.slider_a_picture_link{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    display: flex;
+}
+
 input {
     margin: 0px 15px;
 }
