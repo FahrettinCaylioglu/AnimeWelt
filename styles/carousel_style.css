@@ -143,6 +143,7 @@
 .button_section img {
     position: absolute;
 
+
     top: 510px;
     left: 500px;
 
@@ -179,11 +180,11 @@
 
 }
 
-.share_direction:focus{
-
+.share_direction a {
+    animation: einblenden 5s forwards;
 }
 
-.share_button:focus{
+.share_button:focus {
     animation: buttonslide 5s forwards;
 }
 
@@ -194,6 +195,15 @@
 
     100% {
         transform: translateX(-100px);
+    }
+}
+
+@keyframes einblenden {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
         opacity: 1;
     }
 }

@@ -282,8 +282,6 @@
 /* Highlights section */
 
 .highlights-section {
-    height: 760px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -309,6 +307,7 @@
     flex-direction: column;
 
     gap: 24px;
+    padding-bottom: 80px;
 }
 
 .textbox_slider {
