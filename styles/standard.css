@@ -51,6 +51,7 @@ header {
     padding: 32px 0px 32px 145px;
 
     font-family: 'Arima-700';
+    font-size: 1.5rem;
 }
 
 header img {
@@ -89,6 +90,7 @@ a:hover {
 */
 
 .main-section {
+    padding-top: 80px;
     padding-bottom: 50px;
 }
 

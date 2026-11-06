@@ -354,12 +354,9 @@
     transform: translateX(calc(-150% /4));
 }
 
-.slider_a_picture_link {
-    width: 100%;
-    height: 100%;
-
-    position: absolute;
-    display: flex;
+.slider_a_wrapper img {
+    width: 1200px;
+    height: 530px;
 }
 
 input {
