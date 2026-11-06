@@ -179,7 +179,11 @@
 
 }
 
-.share_direction:active{
+.share_direction:focus{
+
+}
+
+.share_button:focus{
     animation: buttonslide 5s forwards;
 }
 
@@ -187,7 +191,6 @@
     0% {
         transform: translateX(0px);
     }
-
 
     100% {
         transform: translateX(-100px);
