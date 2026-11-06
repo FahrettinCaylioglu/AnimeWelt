@@ -2,7 +2,7 @@
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Arima';
+    font-family: 'Arima-400';
     font-style: normal;
     font-weight: 400;
     src: url('/assets/fonts/arima-v7-latin-regular.woff2') format('woff2');
@@ -13,7 +13,7 @@
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Arima';
+    font-family: 'Arima-500';
     font-style: normal;
     font-weight: 500;
     src: url('/assets/fonts/arima-v7-latin-500.woff2') format('woff2');
@@ -24,7 +24,7 @@
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Arima';
+    font-family: 'Arima-700';
     font-style: normal;
     font-weight: 700;
     src: url('/assets/fonts/arima-v7-latin-700.woff2') format('woff2');
@@ -35,7 +35,7 @@
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Palanquin';
+    font-family: 'Palanquin-400';
     font-style: normal;
     font-weight: 400;
     src: url('/assets/fonts/palanquin-v17-latin-regular.woff2') format('woff2');
@@ -46,7 +46,7 @@
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Palanquin';
+    font-family: 'Palanquin-500';
     font-style: normal;
     font-weight: 500;
     src: url('/assets/fonts/palanquin-v17-latin-500.woff2') format('woff2');
@@ -57,7 +57,7 @@
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Palanquin';
+    font-family: 'Palanquin-600';
     font-style: normal;
     font-weight: 600;
     src: url('/assets/fonts/palanquin-v17-latin-600.woff2') format('woff2');
@@ -68,7 +68,7 @@
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Palanquin';
+    font-family: 'Palanquin-700';
     font-style: normal;
     font-weight: 700;
     src: url('/assets/fonts/palanquin-v17-latin-700.woff2') format('woff2');
@@ -79,7 +79,7 @@
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Palanquin Dark';
+    font-family: 'Palanquin Dark-400';
     font-style: normal;
     font-weight: 400;
     src: url('/assets/fonts/palanquin-dark-v17-latin-regular.woff2') format('woff2');
@@ -90,7 +90,7 @@
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Palanquin Dark';
+    font-family: 'Palanquin Dark-600';
     font-style: normal;
     font-weight: 600;
     src: url('/assets/fonts/palanquin-dark-v17-latin-600.woff2') format('woff2');
@@ -101,7 +101,7 @@
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Palanquin Dark';
+    font-family: 'Palanquin Dark-700';
     font-style: normal;
     font-weight: 700;
     src: url('/assets/fonts/palanquin-dark-v17-latin-700.woff2') format('woff2');
