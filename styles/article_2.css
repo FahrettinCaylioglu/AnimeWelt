@@ -20,6 +20,17 @@
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* arima-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Arima-700';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/arima-v7-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 p {
     font-family: 'Palanquin-400';
     font-size: 1.5rem;
@@ -30,7 +41,11 @@ p {
     display: flex;
     flex-direction: column;
     gap: 80px;
+}
+
+.main-section {
     padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .article_1 {
@@ -84,4 +99,118 @@ p {
     width: 931px;
     height: 520px;
     border-radius: 50px;
+}
+
+.bottom_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+
+    gap: 24px;
+    padding: 60px 32px;
+}
+
+.text_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 20px;
+    gap: 32px;
+}
+
+.tipp_box {
+    height: 200px;
+    width: 1000px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+    padding: 25px 16px;
+
+    border-radius: 30px;
+    background-color: #97618569;
+}
+
+.tipp_box ol {
+    font-family: 'Palanquin-400';
+    line-height: 180%
+}
+
+.tipp_smallbox {
+    height: 65px;
+    width: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: -50px;
+    left: -30px;
+    rotate: -15deg;
+
+    border-radius: 10px;
+    background-color: #340e26;
+}
+
+.tipp_smallbox p {
+    color: #976185;
+    font-size: 28px;
+}
+
+.button_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 45px;
+}
+
+.share_button {
+    height: 50px;
+    width: 150px;
+
+    border-radius: 40px;
+    padding: 0px 24px;
+
+    color: white;
+    background-color: #340e26;
+    display: inline-block;
+
+    font-family: 'Arima-700';
+    font-size: 1.5rem;
+    line-height: 120%;
+    letter-spacing: 5%;
+}
+
+.share_button:hover {
+    text-decoration-color: #976185;
+    color: white;
+    background-color: #976185;
+}
+
+.button_section img {
+    position: absolute;
+
+    top: 510px;
+    left: 39%;
+
+    rotate: 0deg;
+}
+
+.button_section p {
+    text-align: center;
+}
+
+li {
+    font-size: 24px;
 }

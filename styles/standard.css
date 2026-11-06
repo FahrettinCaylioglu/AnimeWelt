@@ -72,7 +72,7 @@ h2 {
     color: #340e26;
 }
 
-h4 {
+h3 {
     font-family: 'Palanquin-600';
     font-size: 2.5rem;
     color: #340e26;
@@ -128,6 +128,14 @@ a:hover {
     list-style-type: none;
 
     gap: 72px;
+}
+
+/*
+    MAIN SECTION
+*/
+
+.main-section {
+    padding-bottom: 50px;
 }
 
 /*
@@ -263,7 +271,7 @@ a:hover {
 }
 
 .title h1,
-h4 {
+h3 {
     line-height: 120%;
 }
 
