@@ -306,7 +306,7 @@ h3 {
 
 /* RESPONSIVE */
 
-@media screen and (max-width: 1441px) {
+@media screen and (min-width: 1441px) {
     .main-section {
         padding: 0px max(120px, calc(50% - 720px));
     }

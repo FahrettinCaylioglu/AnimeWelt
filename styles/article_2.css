@@ -199,12 +199,7 @@ p {
 }
 
 .button_section img {
-    position: absolute;
-
-    top: 510px;
-    left: 39%;
-
-    rotate: 0deg;
+    display: block;
 }
 
 .button_section p {
@@ -213,4 +208,10 @@ p {
 
 li {
     font-size: 24px;
+}
+
+.normal-arrow {
+    position: absolute;
+    left: -40px;
+    bottom: 15px;
 }
