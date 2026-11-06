@@ -79,7 +79,7 @@ h2 {
     color: var(--color-purple);
 }
 
-h4 {
+h3 {
     font-family: 'Palanquin-600';
     font-size: 2.5rem;
     color: var(--color-purple);
@@ -143,6 +143,14 @@ a:hover {
     list-style-type: none;
 
     gap: 72px;
+}
+
+/*
+    MAIN SECTION
+*/
+
+.main-section {
+    padding-bottom: 50px;
 }
 
 /*
@@ -278,7 +286,7 @@ a:hover {
 }
 
 .title h1,
-h4 {
+h3 {
     line-height: 120%;
 }
 
