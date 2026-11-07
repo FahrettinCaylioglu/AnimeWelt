@@ -417,7 +417,6 @@ input[type="radio"]:checked {
     background-color: var(--color-light-purple);
     display: flex;
     flex-direction: column;
-    gap: 8px;
 }
 
 .faq-question-wrapper h4 {
@@ -450,7 +449,6 @@ input[type="radio"]:checked {
     background-color: white;
     border-radius: 5px;
     padding: 4px 10px;
-    animation: dropDown-unchecked 1s both ease-in-out;
     font-family: 'Palanquin-500';
 }
 

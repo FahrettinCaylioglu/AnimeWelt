@@ -5,6 +5,7 @@
 
 html {
     font-size: 16px;
+    height: 100vh;
 }
 
 :root {
@@ -90,8 +91,7 @@ a:hover {
 */
 
 .main-section {
-    padding-top: 80px;
-    padding-bottom: 50px;
+    padding: 80px 120px 50px 120px;
 }
 
 /*
