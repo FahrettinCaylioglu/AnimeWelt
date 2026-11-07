@@ -12,11 +12,21 @@
 
 .slider_b {
     height: 440px;
+    max-width: 1300px;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin: 50px 0px;
 }
+
+.slider_b img {
+    height: 440px;
+    width: 300px;
+
+}
+
 
 .slider_b_element {
     z-index: 1;
@@ -46,7 +56,6 @@
 
 .carousel_section p {
     text-align: center;
-    padding: 60px 32px;
 }
 
 .text_info {
@@ -55,7 +64,7 @@
     align-items: center;
     flex-direction: column;
 
-    padding: 20px;
+    padding: 0px 40px;
     gap: 32px;
 }
 
