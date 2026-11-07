@@ -12,11 +12,20 @@
 
 .slider_b {
     height: 440px;
+    max-width: 1300px;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin: 50px 0px;
 }
+
+.slider_b img {
+    height: 440px;
+    width: 300px;
+}
+
 
 .slider_b_element {
     z-index: 1;
@@ -46,7 +55,6 @@
 
 .carousel_section p {
     text-align: center;
-    padding: 60px 32px;
 }
 
 .text_info {
@@ -55,7 +63,7 @@
     align-items: center;
     flex-direction: column;
 
-    padding: 20px;
+    padding: 0px 40px;
     gap: 32px;
 }
 
@@ -116,98 +124,6 @@
 
     gap: 45px;
 }
-
-/* Button*/
-
-.share_button {
-    height: 50px;
-    width: 150px;
-
-    border-radius: 40px;
-    padding: 0px 24px;
-
-    color: white;
-    background-color: var(--color-purple);
-    text-decoration: underline;
-    text-decoration-style: wavy;
-    text-decoration-color: var(--color-light-purple);
-    display: inline-block;
-}
-
-.share_button:hover {
-    text-decoration-color: var(--color-light-purple);
-    color: white;
-    background-color: var(--color-light-purple);
-}
-
-.button_section img {
-    position: absolute;
-
-
-    top: 510px;
-    left: 500px;
-
-    rotate: 0deg;
-}
-
-.button_section p {
-    text-align: center;
-}
-
-.button_section a {
-    text-decoration-style: solid;
-    color: var(--color-light-purple);
-}
-
-.share_direction {
-    background-color: yellow;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    gap: 10px;
-}
-
-.share_links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    opacity: 0;
-
-}
-
-.share_direction a {
-    animation: einblenden 5s forwards;
-}
-
-.share_button:focus {
-    animation: buttonslide 5s forwards;
-}
-
-@keyframes buttonslide {
-    0% {
-        transform: translateX(0px);
-    }
-
-    100% {
-        transform: translateX(-100px);
-    }
-}
-
-@keyframes einblenden {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 li {
     font-size: 24px;
 }

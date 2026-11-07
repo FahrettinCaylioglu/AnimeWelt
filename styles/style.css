@@ -2,84 +2,64 @@
 
 .start-animation-section {
     height: 530px;
-    background-color: rgb(163, 164, 78);
+    width: 100%;
+
     background-image: url(../assets/images/bild_four.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
-}
+    position: relative;
+    overflow: hidden;
 
-.start-animation-section img {
-    width: 100%;
-    height: 530px;
+    z-index: 2;
 }
 
 .animation-rectangle {
-    height: 530px;
-    width: 100%;
-
-    overflow: hidden;
+    height: 100%;
+    width: 300%;
 
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
 
-    position: relative;
+    position: absolute;
+    display: flex;
+
+    z-index: 1;
+
     animation: shrink 5s forwards;
+}
+
+.start-animation-section img {
+    height: 530px;
+    width: calc(100% /3);
 }
 
 @keyframes shrink {
     0% {
-        height: 530px;
-        width: 100%;
+        transform: translateX(-0%);
 
-        position: absolute;
-        z-index: 0;
-
-
-        top: 128px;
     }
 
     25% {
-        height: 530px;
-        width: 100%;
+        transform: translateX(-50%);
 
-        position: absolute;
-        z-index: 0;
-
-
-        top: 128px;
     }
 
     50% {
-        height: 530px;
-        width: 100%;
+       transform: translateX(-50%);
 
-        position: absolute;
-        z-index: 0;
-
-
-        top: 128px;
     }
 
     75% {
-        height: 515px;
-        width: 940px;
+        transform: translateX(-80%);
 
-        position: absolute;
-        z-index: 1;
-
-        top: 128px;
     }
 
     100% {
-        height: 540px;
-        width: 645px;
+        transform: translateX(-80%);
 
-        position: absolute;
-        z-index: 2;
-        top: 128px;
     }
 }
 
