@@ -120,7 +120,13 @@ a:hover {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    font-family: 'Palanquin-400';
+    font-size: 16px;
+}
 
+.footer-log-imp p {
+    font-family: 'Palanquin-400';
+    font-size: 1rem;
 }
 
 .footer-logo {
@@ -129,16 +135,6 @@ a:hover {
     align-items: center;
     gap: 4px;
 
-}
-
-.footer-impressum {
-    display: flex;
-    flex-direction: row;
-    gap: 72px;
-}
-
-.footer-impressum p {
-    font-size: 1.15rem;
 }
 
 .footer-logo img {
@@ -264,8 +260,37 @@ h3 {
 /* RESPONSIVE */
 
 @media screen and (min-width: 1441px) {
+    .header {
+        padding: 0px max(120px, calc(50% - 720px));
+    }
+
     .main-section {
         padding: 0px max(120px, calc(50% - 720px));
     }
 
+    .footer {
+        padding: 0px max(120px, calc(50% - 720px));
+    }
+
+}
+
+@media screen and (min-width:700px) and (max-width: 1080px) {
+    .menu-bar li:nth-last-child(-n+2) {
+        display: none;
+    }
+
+    .footer-log-imp {
+        min-width: unset;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .author-section {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .author-info {
+        max-width: fit-content;
+    }
 }

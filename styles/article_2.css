@@ -87,8 +87,8 @@ p {
 }
 
 .tipp_box {
-    height: 200px;
-    width: 1000px;
+    max-height: 200px;
+    max-width: 1000px;
 
     display: flex;
     justify-content: center;
@@ -108,8 +108,9 @@ p {
 }
 
 .tipp_smallbox {
-    height: 65px;
-    width: 200px;
+    max-height: 65px;
+    max-width: 200px;
+    padding: 18px 40px;
 
     display: flex;
     justify-content: center;
@@ -178,4 +179,13 @@ li {
     position: absolute;
     left: 380px;
     bottom: -10px;
+}
+
+@media screen and (min-width:700px) and (max-width: 1080px) {
+    .tipp_box li {
+        font-size: 1.2rem;
+        line-height: 140%;
+    }
+
+    .tipp_smallbox {}
 }
