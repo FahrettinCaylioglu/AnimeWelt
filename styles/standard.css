@@ -38,6 +38,11 @@ p {
     font-size: 1.5rem;
 }
 
+li {
+    font-size: 1.5rem;
+    font-family: 'Palanquin-400';
+}
+
 header {
     height: 128px;
 
@@ -200,14 +205,14 @@ a:hover {
 
 .a-name {
     font-family: 'Arima-700';
-    font-size: 1.1rem;
+    font-size: 1.125rem;
     text-align: center;
     line-height: 120%;
 }
 
 .a-job {
     font-family: 'Arima-400';
-    font-size: 1.1rem;
+    font-size: 1.125rem;
     text-align: center;
     line-height: 120%;
 }
@@ -227,6 +232,11 @@ a:hover {
 h3 {
     line-height: 120%;
 }
+
+.title h1 {
+    font-size: 4rem;
+}
+
 
 .quick-article-info {
     display: flex;
@@ -306,6 +316,7 @@ h3 {
 }
 
 .button_section p {
+    font-family: 'Arima-500';
     text-align: center;
 }
 

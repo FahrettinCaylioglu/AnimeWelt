@@ -10,6 +10,13 @@
     padding: 60px 32px;
 }
 
+.carousel_section p {
+    text-align: center;
+}
+
+.carousel_section h1 {
+    font-size: 2rem;
+}
 .slider_b {
     height: 440px;
     max-width: 1300px;
@@ -53,9 +60,7 @@
     transform: perspective(320px) rotateY(-20deg) translateX(20px);
 }
 
-.carousel_section p {
-    text-align: center;
-}
+
 
 .text_info {
     display: flex;
