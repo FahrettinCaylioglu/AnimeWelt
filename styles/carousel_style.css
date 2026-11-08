@@ -57,65 +57,6 @@
     text-align: center;
 }
 
-.text_info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    padding: 0px 40px;
-    gap: 32px;
-}
-
-.bottom_section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    position: relative;
-
-    gap: 24px;
-    padding: 60px 32px;
-}
-
-.tipp_box {
-    height: 200px;
-    width: 1000px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    position: relative;
-    padding: 25px 16px;
-
-    border-radius: 30px;
-    background-color: var(--box-light-purple);
-}
-
-.tipp_smallbox {
-    height: 65px;
-    width: 200px;
-
-    display: flex;
-    justify-content: center;
-
-    position: absolute;
-    top: -50px;
-    left: -30px;
-    rotate: -15deg;
-
-    border-radius: 10px;
-    background-color: var(--color-purple);
-}
-
-.tipp_smallbox p {
-    color: var(--color-light-purple);
-    font-size: 28px;
-}
-
 li {
     font-size: 24px;
 }
