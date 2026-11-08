@@ -16,14 +16,14 @@ html {
 
 h1 {
     font-family: 'Arima-700';
-    font-size: 4rem;
+    font-size: 3.25rem;
     color: var(--color-light-purple);
 
 }
 
 h2 {
     font-family: 'Arima-700';
-    font-size: 4rem;
+    font-size: 3rem;
     color: var(--color-purple);
 }
 
