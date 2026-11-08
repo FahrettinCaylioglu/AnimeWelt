@@ -116,14 +116,6 @@
     font-size: 28px;
 }
 
-.button_section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    gap: 45px;
-}
 li {
     font-size: 24px;
 }

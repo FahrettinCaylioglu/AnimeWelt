@@ -259,6 +259,14 @@ h3 {
 
 /* Button*/
 
+.button_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 45px;
+}
+
 .share_button {
     height: 50px;
     width: 150px;
@@ -332,7 +340,7 @@ h3 {
 }
 
 .share_links a {
-    font-size: 1,125rem;
+    font-size: 1, 125rem;
     font-family: 'Arima-700';
 }
 
