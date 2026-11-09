@@ -1,13 +1,9 @@
 /* Animation Main Side */
 
 .start-animation-section {
-    height: 530px;
+    height: 515px;
     width: 100%;
-
-    background-image: url(../assets/images/bild_four.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    max-width: 1440px;
 
     position: relative;
     overflow: hidden;
@@ -22,28 +18,48 @@
     justify-content: center;
     flex-direction: row;
 
-
-    animation: shrink 5s forwards;
 }
 
-.start-animation-section img {
-    height: 530px;
+.background>img {
+    width: 1440px;
+    height: 515px;
+    object-fit: cover;
+    object-position: center;
+
+    max-width: 1440px;
+}
+
+.background {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 1;
 }
 
 .yellow_start {
     overflow: hidden;
-
     position: absolute;
     top: 0px;
-    left: 0px;
+    right: 0px;
+
+    z-index: 3;
+
+    animation: index 3s forwards;
 }
 
 .yellow_mid {
     overflow: hidden;
-
     position: absolute;
     top: 0px;
-    left: 0px;
+    right: 0px;
+
+    z-index: 2;
+
+    animation: shrink 1s forwards;
+    animation-delay: 2s;
 }
 
 .yellow_end {
@@ -52,6 +68,11 @@
     position: absolute;
     top: 0px;
     left: 0px;
+
+    z-index: 4;
+
+    animation: disappear 1s ease-in-out 2.5s 1 forwards;
+    animation-delay: 2.5s;
 }
 
 @keyframes shrink {
@@ -91,13 +112,13 @@
     }
 }
 
-@keyframes index {
+@keyframes disappear {
     0% {
-        opacity: 0;
+        opacity: 1;
     }
 
     100% {
-        opacity: 1;
+        opacity: 0;
     }
 }
 
@@ -235,8 +256,7 @@
     align-items: center;
     flex-direction: column;
 
-    padding-top: 120px;
-    padding-bottom: 60px;
+    padding-top: 60px;
     gap: 20px;
 }
 
@@ -261,8 +281,10 @@
 }
 
 .textbox_slider {
-    max-height: 230px;
-    max-width: 880px;
+    height: 40%;
+    /* (220px)*/
+    width: 75%;
+    /* (880px)*/
 
     align-self: flex-start;
     position: absolute;
@@ -289,7 +311,7 @@
     font-size: 1.75rem;
 }
 
-.textbox_slider h2 {
+.textbox_slider h3 {
     font-family: 'Palanquin Dark-600';
     font-size: 3rem;
     color: var(--color-purple);
@@ -300,16 +322,15 @@
     background-color: #d3d3d352;
 
     height: 530px;
-    width: 100%;
+    width: 1200px;
 
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    gap: 22px;
 
     overflow: hidden;
 
-    border-top-right-radius: 100px;
+    gap: 22px;
 }
 
 .slider_a input {
@@ -380,6 +401,12 @@
     transform: translateX(calc(-150% /4));
 }
 
+.slider_a_wrapper img {
+    width: 1200px;
+    height: 530px;
+
+    border-top-right-radius: 100px
+}
 
 
 input[type="radio"] {
@@ -406,11 +433,10 @@ input[type="radio"]:checked {
 /* FAQ */
 
 .faq {
+    padding: 60px;
     display: flex;
     flex-direction: column;
     gap: 56px;
-    padding-top: 60px;
-    padding-bottom: 60px;
 }
 
 .faq-title {
@@ -420,14 +446,15 @@ input[type="radio"]:checked {
     gap: 8px;
 }
 
+.faq-title img {
+    width: 48px;
+    height: 48px;
+}
+
 .faq-wrapper {
     display: flex;
     flex-direction: column;
     gap: 32px;
-}
-
-.faq-wrapper input[type="checkbox"] {
-    height: 0;
 }
 
 .faq-question-wrapper {
@@ -448,7 +475,6 @@ input[type="radio"]:checked {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    align-items: center;
 }
 
 .question-section {
@@ -456,42 +482,48 @@ input[type="radio"]:checked {
     gap: 4px;
 }
 
+.arrow-box {
+    all: unset;
+}
+
 .arrow-icon {
-    height: 24px;
-    width: 24px;
+    transition: transform 255ms ease-in-out;
 }
 
 .answer-section {
-    max-height: 0;
+    display: none;
     background-color: white;
-    overflow: hidden;
     border-radius: 5px;
-    font-family: 'Palanquin-500';
-    padding: 0px 10px;
-    transition: all 0.7s ease-in-out;
-}
-
-.arrow-box:checked~.answer-section {
-    max-height: 100px;
     padding: 4px 10px;
+    font-family: 'Palanquin-500';
 }
 
 /* box checked */
 
-.arrow-icon img {
-    transition: transform 0.7s ease;
+.faq-question-wrapper .arrow-box:checked~.answer-section {
+    display: block;
+    will-change: max-height;
+    max-height: 300em;
 }
 
-.arrow-box:checked~.faq-section .arrow-icon img {
-    transform: rotate(180deg);
+.faq-question-wrapper .arrow-box:checked+div>label>span>img {
+    transform: rotate(-180deg);
+    transition-duration: 255ms;
 }
+
+.faq-question-wrapper .arrow-box:checked+div>label>span>img {
+    transform: rotate(-180deg);
+    transition-duration: 255ms;
+}
+
+
 
 /*
 CONTACT FORM
 */
 
 .contact-form-wrapper {
-    padding: 0px 50px;
+    padding: 120px 170px;
     display: flex;
     flex-direction: column;
     gap: 56px;
@@ -586,7 +618,6 @@ CONTACT FORM
 .privacy-text {
     font-family: 'Palanquin-400';
     font-size: 1rem;
-    line-height: 120%;
 }
 
 .privacy-text a {
@@ -606,8 +637,6 @@ CONTACT FORM
     position: relative;
     height: 18px;
     width: 18px;
-    min-width: 18px;
-    flex-shrink: 0;
     border: solid 1px black;
     border-radius: 4px;
 }
@@ -621,7 +650,6 @@ CONTACT FORM
 
 }
 
-/*Haken in checkbox*/
 .privacy-checkbox:after {
     content: "";
     position: absolute;
@@ -644,14 +672,11 @@ CONTACT FORM
 
 .privacy-button {
     opacity: 0.5;
-    height: 48px;
-    width: 150px;
-    border: solid 2px #303030;
+    padding: 10px 24px;
+    border: solid 1px #303030;
     border-radius: 40px;
     pointer-events: none;
-    font-family: 'Arima-700';
-    font-size: 1.5rem;
-    text-align: center;
+
 }
 
 .send-section:has(#checkbox-id:checked) .privacy-button {
