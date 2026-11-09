@@ -81,6 +81,9 @@
     transform-origin: 50% 50%;
     animation: einblenden1 3.5s ease-in-out forwards;
 
+    color: red;
+    font-size: 3.75rem;
+
     z-index: 5;
 }
 
@@ -88,6 +91,8 @@
     opacity: 0;
     transform-origin: 50% 50%;
     animation: einblenden2 3.5s ease-in-out forwards;
+
+    font-size: 1.75rem;
 
     z-index: 5;
 }
@@ -274,6 +279,10 @@
     backdrop-filter: blur(5px);
 }
 
+.textbox_slider p {
+    font-size: 1.75rem;
+}
+
 .textbox_slider h3 {
     font-family: 'Palanquin Dark-600';
     font-size: 3rem;
@@ -455,6 +464,11 @@ CONTACT FORM
     display: flex;
     flex-direction: column;
     gap: 56px;
+}
+
+.contact-form-wrapper {
+
+    font-size: 1.5rem;
 }
 
 .title-section {

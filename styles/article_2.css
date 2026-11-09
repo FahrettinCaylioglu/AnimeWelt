@@ -66,6 +66,72 @@ li {
     font-size: 24px;
 }
 
+.bottom_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+
+    gap: 24px;
+    padding: 60px 32px;
+}
+
+.text_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 20px;
+    gap: 32px;
+}
+
+.tipp_box {
+    max-height: 200px;
+    max-width: 1000px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+    padding: 25px 16px;
+
+    border-radius: 30px;
+    background-color: #97618569;
+}
+
+.tipp_box ol {
+    font-family: 'Palanquin-400';
+    line-height: 180%
+}
+
+.tipp_smallbox {
+    max-height: 65px;
+    max-width: 200px;
+    padding: 18px 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: -50px;
+    left: -30px;
+    rotate: -15deg;
+
+    border-radius: 10px;
+    background-color: #340e26;
+}
+
+.tipp_smallbox p {
+    color: #976185;
+    font-size: 28px;
+}
+
 .normal-arrow {
     position: absolute;
     left: 380px;
