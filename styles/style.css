@@ -23,7 +23,7 @@
     flex-direction: row;
 
 
-    animation: shrink 5s forwards;
+    animation: shrink 5s forwards, index 5s forwards, appear 5s forwards
 }
 
 .start-animation-section img {
@@ -91,7 +91,7 @@
     }
 }
 
-@keyframes index {
+@keyframes appear {
     0% {
         opacity: 0;
     }
