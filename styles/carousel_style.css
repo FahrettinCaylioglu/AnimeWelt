@@ -17,6 +17,7 @@
 .carousel_section h1 {
     font-size: 2rem;
 }
+
 .slider_b {
     height: 440px;
     max-width: 1300px;
@@ -29,22 +30,30 @@
 }
 
 .slider_b img {
-    height: 440px;
+    height: 450px;
     width: 300px;
+
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 
 .slider_b_element {
     z-index: 1;
+
     width: 300px;
     height: 80%;
+    flex-shrink: 0;
+
+
     border-radius: 16px;
 
     box-shadow: 0px 4px 3px rgba(3, 7, 18, 0.03),
         0px 14px 11px rgba(3, 7, 18, 0.05),
         0px 32px 24px rgba(3, 7, 18, 0.08);
 
-    transform: perspective(250px) rotateY(20deg) translateX(-80px);
+    transform: perspective(300px) rotateY(10deg) translateX(0px);
     transform-origin: 50% 50%;
 
     transition: all 250ms ease-in-out;
