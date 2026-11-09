@@ -28,24 +28,31 @@
 
 .start-animation-section img {
     height: 530px;
-
 }
 
 .yellow_start {
+    overflow: hidden;
+
     position: absolute;
-    z-index: 1;
+    top: 0px;
+    left: 0px;
 }
 
 .yellow_mid {
+    overflow: hidden;
+
     position: absolute;
-    z-index: 2;
+    top: 0px;
+    left: 0px;
 }
 
 .yellow_end {
-    position: absolute;
-    z-index: 3;
-}
+    overflow: hidden;
 
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
 
 @keyframes shrink {
     0% {
@@ -54,13 +61,13 @@
     }
 
     25% {
-        transform: translateX(-50%);
+        transform: translateX(-0%);
 
     }
 
     50% {
         transform: translateX(-50%);
-
+        
     }
 
     75% {
@@ -69,8 +76,28 @@
     }
 
     100% {
-        transform: translateX(-80%);
+        transform: translateX(-100%);
 
+    }
+}
+
+@keyframes index {
+    0% {
+        z-index: 3;
+    }
+
+    100% {
+        z-index: 0;
+    }
+}
+
+@keyframes index {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
@@ -108,7 +135,8 @@
     font-size: 1.75rem;
     line-height: 1.2;
 
-    animation: erscheinen 3.5s ease-in-out forwards;;
+    animation: erscheinen 3.5s ease-in-out forwards;
+    ;
 }
 
 @keyframes einblenden {
