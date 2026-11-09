@@ -1,6 +1,4 @@
 p {
-    font-family: 'Palanquin-400';
-    font-size: 1.5rem;
     line-height: 120%;
 }
 
@@ -24,8 +22,6 @@ p {
 
 .list-naruto {
     font-family: 'Palanquin-400';
-    font-size: 1.5rem;
-    line-height: 120%;
     padding-left: 15px;
 }
 
@@ -42,6 +38,8 @@ p {
     display: flex;
     align-items: center;
     gap: 10px;
+    font-size: 1.5rem;
+    line-height: 120%;
 }
 
 .list-naruto ul li::before {
@@ -62,6 +60,10 @@ p {
     width: 931px;
     height: 520px;
     border-radius: 50px;
+}
+
+li {
+    font-size: 24px;
 }
 
 .bottom_section {
@@ -136,11 +138,43 @@ p {
     bottom: -10px;
 }
 
-@media screen and (min-width:700px) and (max-width: 1080px) {
-    .tipp_box li {
+@media screen and (max-width:845px) {
+    .list-naruto ul li {
         font-size: 1.2rem;
-        line-height: 140%;
+    }
+}
+
+@media screen and (max-width:725px) {
+    .list-naruto ul li {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .video-section iframe {
+        height: 400px;
     }
 
-    .tipp_smallbox {}
+    .article-section {
+        gap: 45px;
+    }
+}
+
+@media screen and (max-width:524px) {
+    .article-section {
+        gap: 32px;
+    }
+
+    .video-section iframe {
+        height: 330px;
+    }
+
+}
+
+@media screen and (max-width:424px) {
+
+    .video-section iframe {
+        height: 195px;
+    }
+
 }
