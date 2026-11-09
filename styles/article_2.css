@@ -72,16 +72,43 @@ li {
     bottom: -10px;
 }
 
-@media screen and (max-width: 1080px) {
-    .tipp_box li {
-        font-size: 1.2rem;
-        line-height: 140%;
-    }
-
-}
-
 @media screen and (max-width:845px) {
     .list-naruto ul li {
         font-size: 1.2rem;
     }
+}
+
+@media screen and (max-width:725px) {
+    .list-naruto ul li {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .video-section iframe {
+        height: 400px;
+    }
+
+    .article-section {
+        gap: 45px;
+    }
+}
+
+@media screen and (max-width:524px) {
+    .article-section {
+        gap: 32px;
+    }
+
+    .video-section iframe {
+        height: 330px;
+    }
+
+}
+
+@media screen and (max-width:424px) {
+
+    .video-section iframe {
+        height: 195px;
+    }
+
 }
