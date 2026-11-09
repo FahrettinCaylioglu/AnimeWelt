@@ -103,16 +103,13 @@ a:hover {
 .navbar-footer img {
     width: 24px;
     height: 24px;
-    display: block;
 }
 
 .menu-bar-footer {
-    width: 100%;
     padding: 0;
     list-style: none;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 70px;
 }
 
 
@@ -433,7 +430,7 @@ input[type="checkbox"] {
 /* RESPONSIVE */
 
 @media screen and (min-width: 1441px) {
-    header {
+    .header {
         padding: 0px max(120px, calc(50% - 720px));
     }
 

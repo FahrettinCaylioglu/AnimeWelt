@@ -281,16 +281,8 @@
 }
 
 .textbox_slider {
-    height: 40%;
-    /* (220px)*/
-    width: 75%;
-    /* (880px)*/
-
-    align-self: flex-start;
-    position: absolute;
-    top: 54px;
-    left: 38px;
-    transform: translateZ(0);
+    max-height: 230px;
+    max-width: 880px;
 
     display: flex;
     justify-content: flex-start;
@@ -299,7 +291,13 @@
     padding: 16px 24px;
     gap: 8px;
 
-    background-color: rgb(255 255 255 / 30%);
+    position: absolute;
+    top: 55px;
+    left: 40px;
+
+    z-index: 2;
+
+    background-color: rgba(226, 226, 214, 0.158);
     border-inline-width: 0.5px;
     border-inline-color: rgba(255, 255, 255, 0.5);
     border-inline-style: solid solid;
@@ -309,6 +307,7 @@
 
 .textbox_slider p {
     font-size: 1.75rem;
+    line-height: 110%;
 }
 
 .textbox_slider h3 {
@@ -319,7 +318,6 @@
 
 .slider_a {
     position: relative;
-    background-color: #d3d3d352;
 
     height: 530px;
     width: 1200px;
@@ -334,10 +332,12 @@
 }
 
 .slider_a input {
-    z-index: 1;
+    z-index: 2;
 }
 
 .slider_a_wrapper {
+    z-index: 1;
+
     width: 400%;
     height: 100%;
 
@@ -350,39 +350,8 @@
 .slider_a_element {
     width: calc(100% / 4);
     height: 100%;
-    position: relative;
-}
 
-.element_one {
-    background-image: url(../assets/images/spy-family.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-
-}
-
-.element_two {
-    background-image: url(../assets/images/DragonBall.jpg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-
-}
-
-.element_three {
-    background-image: url(../assets/images/OnePieceCrew.jpg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-
-}
-
-.element_four {
-    background-image: url(../assets/images/Naruto.jpg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-
+    border-top-right-radius: 100px;
 }
 
 .slider_a input[value="one"]:checked~.slider_a_wrapper {
@@ -404,8 +373,6 @@
 .slider_a_wrapper img {
     width: 1200px;
     height: 530px;
-
-    border-top-right-radius: 100px
 }
 
 
@@ -585,6 +552,7 @@ CONTACT FORM
 .customer-data input,
 .customer-message input {
     width: 100%;
+    margin: 0px;
     padding-top: 15px;
     padding-bottom: 17px;
     box-sizing: border-box;
@@ -693,49 +661,10 @@ CONTACT FORM
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
 }
 
-@media screen and (max-width:1200px) {
-    .textbox_slider {
-        max-width: 740px;
-    }
-
-}
-
-@media screen and (max-width:1050px) {
-    .textbox_slider {
-        max-width: 550px;
-        top: 70px;
-        left: 20px;
-    }
-
-    .textbox_slider h2 {
-        font-size: 2.5rem;
-    }
-
-    .textbox_slider p {
-        font-size: 1.4rem;
-    }
-}
-
 @media screen and (max-width:800px) {
     .main-section {
         padding-left: 20px;
         padding-right: 20px;
-    }
-
-    .highlights-section {
-        padding: 80px 0px 40px 0px;
-    }
-
-    .headline-and-text-section {
-        padding-bottom: 50px;
-    }
-
-    .textbox_slider {
-        padding: 16px 20px;
-    }
-
-    .textbox_slider p {
-        font-size: 1.25rem;
     }
 
     .faq {
@@ -754,51 +683,12 @@ CONTACT FORM
         flex-direction: column;
     }
 
+    .privacy-checkbox {}
 
-}
 
-@media screen and (max-width:650px) {
-    .textbox_slider {
-        max-width: 450px;
-    }
-}
-
-@media screen and (max-width:550px) {
-    .textbox_slider {
-        max-width: 400px;
-        top: 93px;
-        left: 14px;
-        padding: 16px;
-    }
 }
 
 @media screen and (max-width:480px) {
-    .headline-and-text-section {
-        padding-bottom: 32px;
-    }
-
-    .headline-and-text-section>p {
-        display: none;
-    }
-
-    .textbox_slider {
-        max-height: 190px;
-        max-width: 310px;
-        padding: 10px 12px;
-    }
-
-    .textbox_slider h2 {
-        font-size: 1.75rem;
-    }
-
-    .textbox_slider p {
-        font-size: 1rem;
-    }
-
-    input[type="radio"] {
-        margin-bottom: 30px;
-    }
-
     .faq h4 {
         font-size: 1rem;
     }
