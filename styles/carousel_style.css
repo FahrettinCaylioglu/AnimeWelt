@@ -33,6 +33,8 @@
     height: 450px;
     width: 300px;
 
+    margin: -40px;
+
     object-fit: cover;
     object-position: center;
     display: block;
@@ -62,14 +64,12 @@
 .slider_b_element:hover {
     z-index: 2;
 
-    transform: perspective(250px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
+    transform: perspective(300px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
 }
 
 .slider_b_element:hover~.slider_b_element {
     transform: perspective(320px) rotateY(-20deg) translateX(20px);
 }
-
-
 
 li {
     font-size: 24px;
