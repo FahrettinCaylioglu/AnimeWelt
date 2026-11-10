@@ -299,12 +299,15 @@ PRO TIPS
 .tipp_box {
     max-height: 200px;
     max-width: 1000px;
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     position: relative;
     padding: 25px 16px;
+
     border-radius: 30px;
     background-color: var(--box-light-purple);
 }
@@ -372,10 +375,18 @@ SHARE BUTTON
     width: 24px;
 }
 
-.button_section>img {
-    position: absolute;
-    top: 510px;
-    left: 500px;
+.arrow_button_box {
+    display: flex;
+    flex-direction: row;
+}
+
+.arrow_button_box>img {
+    width: 150px;
+    height: 140px;
+
+    position: relative;
+    top: -50px;
+    left: -40px;
     rotate: 0deg;
 }
 
@@ -395,6 +406,10 @@ SHARE BUTTON
     justify-content: center;
     align-items: center;
     gap: 10px;
+
+    position: relative;
+    left: -80px;
+
 }
 
 .share_links {
@@ -415,17 +430,9 @@ SHARE BUTTON
     font-family: 'Arima-700';
 }
 
-#share_button:checked+.share_button {
-    animation: buttonslide 1s forwards;
-}
-
-#share_button:not(:checked)+.share_button {
-    animation: buttonslideback 1s forwards;
-}
-
 input[type="checkbox"]:checked~.share_links {
     opacity: 1;
-    transform: translateX(65px);
+    transform: translateX(150px);
     pointer-events: auto;
 }
 
@@ -442,26 +449,6 @@ input[type="checkbox"]:checked~.share_links {
 
 input[type="checkbox"] {
     opacity: 0;
-}
-
-@keyframes buttonslide {
-    0% {
-        transform: translateX(0px);
-    }
-
-    100% {
-        transform: translateX(-65px);
-    }
-}
-
-@keyframes buttonslideback {
-    0% {
-        transform: translateX(-65px);
-    }
-
-    100% {
-        transform: translateX(0px);
-    }
 }
 
 /* RESPONSIVE */
