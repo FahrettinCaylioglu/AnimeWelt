@@ -369,12 +369,6 @@ SHARE BUTTON
     text-decoration-color: var(--color-light-purple);
 }
 
-.share_direction img {
-    display: hidden;
-    height: 24px;
-    width: 24px;
-}
-
 .arrow_button_box {
     display: flex;
     flex-direction: row;
@@ -426,7 +420,7 @@ SHARE BUTTON
 }
 
 .share_links a {
-    font-size: 1, 125rem;
+    font-size: 1.125rem;
     font-family: 'Arima-700';
 }
 
@@ -567,6 +561,39 @@ input[type="checkbox"] {
         font-size: 1rem;
         line-height: 140%;
     }
+
+    .arrow_button_box {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Kleiner Pfeil */
+    .arrow_button_box>img {
+        content: url("../assets/icons/pfeil_klein.png");
+
+        position: absolute;
+        width: 65px;
+        height: 60px;
+
+        left: calc(50% - 180px);
+        top: -35px;
+
+        object-fit: contain;
+        z-index: 1;
+    }
+
+    /* Share-Button bleibt mittig */
+    .share_direction {
+        position: relative;
+        left: 0;
+        transform: none;
+        justify-content: center;
+        z-index: 2;
+    }
+
 }
 
 @media screen and (max-width:640px) {
@@ -645,5 +672,14 @@ input[type="checkbox"] {
 
     .tipp_box {
         padding: 25px 10px;
+    }
+
+    .arrow_button_box>img {
+        left: calc(50% - 155px);
+        top: -35px;
+    }
+
+    .button_section p br {
+        display: none;
     }
 }
