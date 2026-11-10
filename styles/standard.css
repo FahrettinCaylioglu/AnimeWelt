@@ -373,10 +373,21 @@ SHARE BUTTON
     width: 24px;
 }
 
-.button_section>img {
-    position: absolute;
-    top: 510px;
-    left: 500px;
+.arrow_button_box {
+    display: flex;
+    flex-direction: row;
+
+    position: relative;
+    left: -20%;
+}
+
+.arrow_button_box>img {
+    width: 150px;
+    height: 140px;
+
+    position: relative;
+    top: -50px;
+    left: 44px;
     rotate: 0deg;
 }
 
@@ -416,17 +427,9 @@ SHARE BUTTON
     font-family: 'Arima-700';
 }
 
-#share_button:checked+.share_button {
-    animation: buttonslide 1s forwards;
-}
-
-#share_button:not(:checked)+.share_button {
-    animation: buttonslideback 1s forwards;
-}
-
 input[type="checkbox"]:checked~.share_links {
     opacity: 1;
-    transform: translateX(65px);
+    transform: translateX(150px);
     pointer-events: auto;
 }
 
@@ -443,26 +446,6 @@ input[type="checkbox"]:checked~.share_links {
 
 input[type="checkbox"] {
     opacity: 0;
-}
-
-@keyframes buttonslide {
-    0% {
-        transform: translateX(0px);
-    }
-
-    100% {
-        transform: translateX(-65px);
-    }
-}
-
-@keyframes buttonslideback {
-    0% {
-        transform: translateX(-65px);
-    }
-
-    100% {
-        transform: translateX(0px);
-    }
 }
 
 /* RESPONSIVE */
