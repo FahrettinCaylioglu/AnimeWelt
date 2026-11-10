@@ -292,8 +292,8 @@ PRO TIPS
     align-items: center;
     flex-direction: column;
     position: relative;
-    gap: 24px;
-    padding: 60px 32px;
+    gap: 64px;
+    padding-top: 80px;
 }
 
 .tipp_box {
@@ -627,6 +627,7 @@ input[type="checkbox"] {
 
 @media screen and (max-width:449px) {
     .tipp_box li {
+
         line-height: 120%;
     }
 

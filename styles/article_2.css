@@ -62,6 +62,10 @@ p {
     border-radius: 50px;
 }
 
+.button_section>p {
+    padding-top: 80px;
+}
+
 @media screen and (max-width:845px) {
     .list-naruto ul li {
         font-size: 1.2rem;

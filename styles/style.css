@@ -509,23 +509,25 @@ input[type="radio"]:checked {
 }
 
 .answer-section {
+    opacity: 0;
     max-height: 0;
     background-color: white;
     overflow: hidden;
     border-radius: 5px;
     font-family: 'Palanquin-500';
     padding: 0px 10px;
-    transition: all 0.7s ease-in-out;
+    transition: all 255ms ease-in-out;
 }
 
 .arrow-box:checked~.answer-section {
+    opacity: 1;
     max-height: 100px;
     padding: 4px 10px;
 }
 
 /* box checked */
 .arrow-icon img {
-    transition: transform 0.7s ease;
+    transition: transform 255ms ease-in-out;
 }
 
 .arrow-box:checked~.faq-section .arrow-icon img {
