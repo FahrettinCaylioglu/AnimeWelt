@@ -376,9 +376,6 @@ SHARE BUTTON
 .arrow_button_box {
     display: flex;
     flex-direction: row;
-
-    position: relative;
-    left: -20%;
 }
 
 .arrow_button_box>img {
@@ -387,7 +384,7 @@ SHARE BUTTON
 
     position: relative;
     top: -50px;
-    left: 44px;
+    left: -40px;
     rotate: 0deg;
 }
 
@@ -407,6 +404,10 @@ SHARE BUTTON
     justify-content: center;
     align-items: center;
     gap: 10px;
+
+    position: relative;
+    left: -80px;
+
 }
 
 .share_links {
