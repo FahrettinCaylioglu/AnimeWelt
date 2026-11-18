@@ -49,7 +49,7 @@
 
     z-index: 3;
 
-    animation: index 3s forwards;
+    animation: index 3s ease-in-out forwards;
 }
 
 .yellow_mid {
@@ -60,7 +60,7 @@
 
     z-index: 2;
 
-    animation: shrink 1.5s forwards;
+    animation: shrink 1.5s ease-in-out forwards;
     animation-delay: 2s;
 }
 
@@ -88,7 +88,10 @@
     width: 50%;
 
     position: absolute;
-    top: 25px;
+}
+
+.yellow_4 {
+    opacity: 0;
 }
 
 
@@ -167,7 +170,7 @@
 }
 
 .headline-section h1 {
-    color: red;
+    color: var(--color-purple);
     font-size: 3.75rem;
 }
 
@@ -179,7 +182,6 @@
     line-height: 1.2;
 
     animation: erscheinen 3s ease-in-out forwards;
-    ;
 }
 
 @keyframes einblenden {
@@ -742,7 +744,7 @@ CONTACT FORM
     }
 }
 
-/* start  animation nach 990px*/
+/* start  animation max 990px*/
 
 @media screen and (max-width: 990px) {
     .yellow_end {
@@ -750,133 +752,232 @@ CONTACT FORM
         left: -150px;
     }
 
-.headline-section {
-    top: 0%;
-    left: 20%;
+    .headline-section {
+        top: 0%;
+        left: 20%;
+    }
+
+
+    @keyframes einblenden {
+        0% {
+            transform: translateY(250px) translateX(0%);
+            opacity: 0;
+        }
+
+        25% {
+            transform: translateY(175px) translateX(0%);
+            opacity: 1;
+        }
+
+        50% {
+            transform: translateY(175px) translateX(0%);
+        }
+
+        75% {
+            transform: translateY(175px) translateX(0%);
+        }
+
+        100% {
+            transform: translateY(175px) translateX(-85%);
+        }
+    }
+
+    .animation-circle {
+        top: 430px;
+        left: 290px;
+
+    }
+}
+
+/* start  animation nach 990px ist hier zu ende*/
+
+
+@media screen and (max-width:800px) {
+    .main-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .highlights-section {
+        padding: 80px 0px 40px 0px;
+    }
+
+    .headline-and-text-section {
+        padding-bottom: 50px;
+    }
+
+    .textbox_slider {
+        padding: 16px 20px;
+    }
+
+    .textbox_slider p {
+        font-size: 1.25rem;
+    }
+
+    .faq {
+        padding: 40px 0px;
+    }
+
+    .contact-form-wrapper {
+        padding: 40px 0px 80px 0px;
+    }
+
+    .contact-text {
+        display: none;
+    }
+
+    .customer-data {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width:650px) {
+    .textbox_slider {
+        max-width: 450px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .textbox_slider {
+        max-width: 400px;
+        top: 93px;
+        left: 14px;
+        padding: 16px;
+    }
 }
 
 
-@keyframes einblenden {
-    0% {
-        transform: translateY(250px) translateX(0%);
-        opacity: 0;
+
+/* start  animation max 525px*/
+
+@media screen and (max-width: 525px) {
+
+    .background>img {
+        max-width: 526px;
+
+        animation: fly_in 2.25s linear forwards;
+        animation-delay: 3.5s;
     }
 
-    25% {
-        transform: translateY(175px) translateX(0%);
+    .yellow_start {
+        animation: disappear 4.4s ease-in-out forwards;
+    }
+
+    .yellow_end {
+        left: 0px;
+    }
+
+    .yellow_2,
+    .yellow_3 {
+        display: none;
+    }
+
+    .yellow_4 {
         opacity: 1;
     }
 
-    50% {
-        transform: translateY(175px) translateX(0%);
+    .yellow_end img {
+        animation: shrink_mobile 3s ease-in-out forwards;
+        animation-delay: 4s;
     }
 
-    75% {
-        transform: translateY(175px) translateX(0%);
+    .headline-section {
+        top: 20%;
+        left: 0%;
+
+        animation: appear 2s ease-in-out forwards, disappear 4s ease-in-out 2.5s forwards;
     }
 
-    100% {
-        transform: translateY(175px) translateX(-85%);
+    .headline-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .headline-section p {
+        font-size: 1.25rem;
+        animation: none;
+    }
+
+    .animation-circle {
+        top: 265px;
+        left: 90px;
+
+        animation: appear 7.5s ease-in-out 1 forwards, spin 12s linear infinite;
+    }
+
+    @keyframes disappear {
+        0% {
+            opacity: 1;
+        }
+
+        90% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes shrink_mobile {
+        0% {
+            width: 500px;
+        }
+
+        50% {
+            width: 400px;
+        }
+
+        100% {
+            width: 100%;
+        }
+    }
+    @keyframes fly_in {
+        0% {
+            transform: translate(200px);
+        }
+
+        100% {
+            transform: translate(0px);
+        }
     }
 }
 
-.animation-circle {
-    top: 430px;
-    left: 290px;
+/* start  animation max 525px ist hier zu ende*/
 
+@media screen and (max-width:480px) {
+    .headline-and-text-section {
+        padding-bottom: 32px;
+    }
+
+    .headline-and-text-section>p {
+        display: none;
+    }
+
+    .textbox_slider {
+        max-height: 190px;
+        max-width: 310px;
+        padding: 10px 12px;
+    }
+
+    .textbox_slider h2 {
+        font-size: 1.75rem;
+    }
+
+    .textbox_slider p {
+        font-size: 1rem;
+    }
+
+    input[type="radio"] {
+        margin-bottom: 30px;
+    }
+
+    .faq h4 {
+        font-size: 1rem;
+    }
+
+    .arrow-box:checked~.answer-section {
+        max-height: 120px;
+        padding: 0px 10px;
+    }
 }
-}
-    /* start  animation nach 990px ist hier zu ende*/
-
-
-    @media screen and (max-width:800px) {
-        .main-section {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-
-        .highlights-section {
-            padding: 80px 0px 40px 0px;
-        }
-
-        .headline-and-text-section {
-            padding-bottom: 50px;
-        }
-
-        .textbox_slider {
-            padding: 16px 20px;
-        }
-
-        .textbox_slider p {
-            font-size: 1.25rem;
-        }
-
-        .faq {
-            padding: 40px 0px;
-        }
-
-        .contact-form-wrapper {
-            padding: 40px 0px 80px 0px;
-        }
-
-        .contact-text {
-            display: none;
-        }
-
-        .customer-data {
-            flex-direction: column;
-        }
-
-    }
-
-    @media screen and (max-width:650px) {
-        .textbox_slider {
-            max-width: 450px;
-        }
-    }
-
-    @media screen and (max-width:550px) {
-        .textbox_slider {
-            max-width: 400px;
-            top: 93px;
-            left: 14px;
-            padding: 16px;
-        }
-    }
-
-    @media screen and (max-width:480px) {
-        .headline-and-text-section {
-            padding-bottom: 32px;
-        }
-
-        .headline-and-text-section>p {
-            display: none;
-        }
-
-        .textbox_slider {
-            max-height: 190px;
-            max-width: 310px;
-            padding: 10px 12px;
-        }
-
-        .textbox_slider h2 {
-            font-size: 1.75rem;
-        }
-
-        .textbox_slider p {
-            font-size: 1rem;
-        }
-
-        input[type="radio"] {
-            margin-bottom: 30px;
-        }
-
-        .faq h4 {
-            font-size: 1rem;
-        }
-
-        .arrow-box:checked~.answer-section {
-            max-height: 120px;
-            padding: 0px 10px;
-        }
-    }
