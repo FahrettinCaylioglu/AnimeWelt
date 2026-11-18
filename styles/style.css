@@ -742,94 +742,141 @@ CONTACT FORM
     }
 }
 
-@media screen and (max-width:800px) {
-    .main-section {
-        padding-left: 20px;
-        padding-right: 20px;
+/* start  animation nach 990px*/
+
+@media screen and (max-width: 990px) {
+    .yellow_end {
+
+        left: -150px;
     }
 
-    .highlights-section {
-        padding: 80px 0px 40px 0px;
-    }
-
-    .headline-and-text-section {
-        padding-bottom: 50px;
-    }
-
-    .textbox_slider {
-        padding: 16px 20px;
-    }
-
-    .textbox_slider p {
-        font-size: 1.25rem;
-    }
-
-    .faq {
-        padding: 40px 0px;
-    }
-
-    .contact-form-wrapper {
-        padding: 40px 0px 80px 0px;
-    }
-
-    .contact-text {
-        display: none;
-    }
-
-    .customer-data {
-        flex-direction: column;
-    }
-
+.headline-section {
+    top: 0%;
+    left: 20%;
 }
 
-@media screen and (max-width:650px) {
-    .textbox_slider {
-        max-width: 450px;
+
+@keyframes einblenden {
+    0% {
+        transform: translateY(250px) translateX(0%);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateY(175px) translateX(0%);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(175px) translateX(0%);
+    }
+
+    75% {
+        transform: translateY(175px) translateX(0%);
+    }
+
+    100% {
+        transform: translateY(175px) translateX(-85%);
     }
 }
 
-@media screen and (max-width:550px) {
-    .textbox_slider {
-        max-width: 400px;
-        top: 93px;
-        left: 14px;
-        padding: 16px;
-    }
+.animation-circle {
+    top: 430px;
+    left: 290px;
+
 }
-
-@media screen and (max-width:480px) {
-    .headline-and-text-section {
-        padding-bottom: 32px;
-    }
-
-    .headline-and-text-section>p {
-        display: none;
-    }
-
-    .textbox_slider {
-        max-height: 190px;
-        max-width: 310px;
-        padding: 10px 12px;
-    }
-
-    .textbox_slider h2 {
-        font-size: 1.75rem;
-    }
-
-    .textbox_slider p {
-        font-size: 1rem;
-    }
-
-    input[type="radio"] {
-        margin-bottom: 30px;
-    }
-
-    .faq h4 {
-        font-size: 1rem;
-    }
-
-    .arrow-box:checked~.answer-section {
-        max-height: 120px;
-        padding: 0px 10px;
-    }
 }
+    /* start  animation nach 990px ist hier zu ende*/
+
+
+    @media screen and (max-width:800px) {
+        .main-section {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .highlights-section {
+            padding: 80px 0px 40px 0px;
+        }
+
+        .headline-and-text-section {
+            padding-bottom: 50px;
+        }
+
+        .textbox_slider {
+            padding: 16px 20px;
+        }
+
+        .textbox_slider p {
+            font-size: 1.25rem;
+        }
+
+        .faq {
+            padding: 40px 0px;
+        }
+
+        .contact-form-wrapper {
+            padding: 40px 0px 80px 0px;
+        }
+
+        .contact-text {
+            display: none;
+        }
+
+        .customer-data {
+            flex-direction: column;
+        }
+
+    }
+
+    @media screen and (max-width:650px) {
+        .textbox_slider {
+            max-width: 450px;
+        }
+    }
+
+    @media screen and (max-width:550px) {
+        .textbox_slider {
+            max-width: 400px;
+            top: 93px;
+            left: 14px;
+            padding: 16px;
+        }
+    }
+
+    @media screen and (max-width:480px) {
+        .headline-and-text-section {
+            padding-bottom: 32px;
+        }
+
+        .headline-and-text-section>p {
+            display: none;
+        }
+
+        .textbox_slider {
+            max-height: 190px;
+            max-width: 310px;
+            padding: 10px 12px;
+        }
+
+        .textbox_slider h2 {
+            font-size: 1.75rem;
+        }
+
+        .textbox_slider p {
+            font-size: 1rem;
+        }
+
+        input[type="radio"] {
+            margin-bottom: 30px;
+        }
+
+        .faq h4 {
+            font-size: 1rem;
+        }
+
+        .arrow-box:checked~.answer-section {
+            max-height: 120px;
+            padding: 0px 10px;
+        }
+    }
