@@ -13,21 +13,28 @@
 .carousel_section h1 {
     font-size: 2rem;
 }
+
 .slider_b {
     width: 100%;
     max-width: 1300px;
 
     display: flex;
-    flex-wrap: wrap;            /* Inputs rutschen in eine zweite Zeile */
+    flex-wrap: wrap;    /* Inputs rutschen in eine zweite Zeile */
     justify-content: center;
     align-items: center;
     gap: 16px 10px;
 }
 
-.slider_b_Wrapper {
-    order: -1;                  /* Wrapper visuell vor die Inputs */
-    flex: 0 0 100%;             /* nimmt die komplette erste Zeile */
-    height: clamp(250px, 35vw, 440px);   /* Höhe jetzt hier statt auf .slider_b */
+/* Desktop: Radios sind versteckt */
+.slider_b input {
+     z-index: 1;
+    display: none;
+    pointer-events: none;
+}
+
+.slider_b_wrapper {
+    order: -1;  /* Wrapper ist unter den bildern die Inputs */
+    height: clamp(250px, 35vw, 440px);/* Höhe jetzt hier statt auf .slider_b */
 
     display: flex;
     justify-content: center;
@@ -36,35 +43,16 @@
     padding: 0px 50px;
 }
 
-/* Desktop: Radios sind versteckt */
-.slider_b input {
-    display: none;
-}
-
-input[type="radio"] {
-    appearance: none;
-    -webkit-appearance: none;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: var(--color-light-purple);
-}
-
-input[type="radio"]:checked {
-    background: var(--color-purple);
-    width: 40px;
-    border-radius: 20px;
-}
-
 .slider_b img {
     width: clamp(140px, 20vw, 300px);
     height: 100%;
 
     margin: -20px;
 
+    display: block;
     object-fit: cover;
     object-position: center;
-    display: block;
+
 }
 
 .slider_b_element {
@@ -96,6 +84,45 @@ input[type="radio"]:checked {
     transform: perspective(320px) rotateY(-20deg) translateX(20px);
 }
 
+.slider_b input[value="one"]:checked~.slider_b_wrapper .element_one {
+    transform: perspective(300px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
+}
+
+.slider_b input[value="two"]:checked~.slider_b_wrapper .element_two {
+    transform: perspective(300px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
+}
+
+.slider_b input[value="three"]:checked~.slider_b_wrapper .element_three {
+    transform: perspective(300px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
+}
+
+.slider_b input[value="four"]:checked~.slider_b_wrapper .element_four {
+    transform: perspective(300px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
+}
+
+.slider_b input[value="five"]:checked~.slider_b_wrapper .element_five {
+    transform: perspective(300px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
+}
+
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 22px;
+    height: 22px;
+
+    margin-top: 30px;
+
+    border-radius: 50%;
+    background: var(--color-light-purple);
+}
+
+input[type="radio"]:checked {
+    background: var(--color-purple);
+    width: 40px;
+    border-radius: 20px;
+}
 li {
     font-size: 24px;
 }
@@ -105,9 +132,61 @@ li {
 }
 
 
-@media screen and (max-width:725px) {
-    
+@media screen and (max-width:960px) {
+
     .slider_b input {
-    display: block;
-}
+        display: block;
+        pointer-events: auto;
+    }
+
+    .slider_b_element {
+        position: relative;
+        left: 40%;
+    } 
+
+    .slider_b_element:checked~.slider_b_element {
+        transform: perspective(320px) rotateY(-20deg) translateX(20px);
+    }
+
+    .slider_b input[value="one"]:checked~.slider_b_wrapper .element_one {
+        transform: perspective(300px) rotateY(0deg) translateX(calc(0% /5)) scaleX(1.5) scaleY(1.2);
+    }
+
+        .slider_b input[value="two"]:checked~.slider_b_wrapper .element_two {
+        transform: perspective(300px) rotateY(0deg) translateX(calc(50% /5)) scaleX(1.5) scaleY(1.2);
+    }
+
+        .slider_b input[value="three"]:checked~.slider_b_wrapper .element_three {
+        transform: perspective(300px) rotateY(0deg) translateX(calc(150% /5)) scaleX(1.5) scaleY(1.2);
+    }
+
+        .slider_b input[value="four"]:checked~.slider_b_wrapper .element_four {
+        transform: perspective(300px) rotateY(0deg) translateX(calc(200% /5)) scaleX(1.5) scaleY(1.2);
+    }
+
+        .slider_b input[value="five"]:checked~.slider_b_wrapper .element_five {
+        transform: perspective(300px) rotateY(0deg) translateX(calc(250% /5)) scaleX(1.5) scaleY(1.2);
+    }
+/*
+        .slider_b input[value="one"]:not(:checked)~.slider_b_wrapper .element_one {
+       transform: perspective(320px) rotateY(20deg) translateX(calc(-250% /5))
+    }
+        .slider_b input[value="two"]:not(:checked)~.slider_b_wrapper .element_two {
+        transform: perspective(320px) rotateY(20deg) translateX(calc(-300% /5))
+    }
+        .slider_b input[value="three"]:not(:checked)~.slider_b_wrapper .element_three {
+        transform: perspective(320px) rotateY(20deg) translateX(calc(-350% /5))
+    }
+        .slider_b input[value="four"]:not(:checked)~.slider_b_wrapper .element_four {
+        transform: perspective(320px) rotateY(20deg) translateX(calc(-400% /5))
+    }
+        .slider_b input[value="five"]:not(:checked)~.slider_b_wrapper .element_five {
+        transform: perspective(320px) rotateY(20deg) translateX(calc(-450% /5))
+    }
+*/
+    .slider_b_element:not(.nohover) {
+        pointer-events: none;
+    }
+
+
 }
