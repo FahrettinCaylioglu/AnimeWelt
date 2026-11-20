@@ -6,7 +6,7 @@
     align-items: center;
     flex-direction: column;
 
-    gap: 80px;
+    gap: 20px;
     padding: 64px 0px;
 }
 
@@ -19,7 +19,8 @@
     max-width: 1300px;
 
     display: flex;
-    flex-wrap: wrap;    /* Inputs rutschen in eine zweite Zeile */
+    flex-wrap: wrap;
+    /* Inputs rutschen in eine zweite Zeile */
     justify-content: center;
     align-items: center;
     gap: 16px 10px;
@@ -27,14 +28,17 @@
 
 /* Desktop: Radios sind versteckt */
 .slider_b input {
-     z-index: 1;
     display: none;
     pointer-events: none;
 }
 
 .slider_b_wrapper {
-    order: -1;  /* Wrapper ist unter den bildern die Inputs */
-    height: clamp(250px, 35vw, 440px);/* Höhe jetzt hier statt auf .slider_b */
+    position: relative;
+    z-index: 1;
+    order: -1;
+    /* Wrapper ist unter den bildern die Inputs */
+    height: clamp(250px, 35vw, 440px);
+    /* Höhe jetzt hier statt auf .slider_b */
 
     display: flex;
     justify-content: center;
@@ -45,9 +49,7 @@
 
 .slider_b img {
     width: clamp(140px, 20vw, 300px);
-    height: 100%;
-
-    margin: -20px;
+    height: 90%;
 
     display: block;
     object-fit: cover;
@@ -68,7 +70,7 @@
         0px 14px 11px rgba(3, 7, 18, 0.05),
         0px 32px 24px rgba(3, 7, 18, 0.08);
 
-    transform: perspective(300px) rotateY(10deg) translateX(0px);
+    transform: perspective(300px) rotateY(15deg) translateX(0px);
     transform-origin: 50% 50%;
 
     transition: all 250ms ease-in-out;
@@ -77,52 +79,35 @@
 .slider_b_element:hover {
     z-index: 2;
 
-    transform: perspective(300px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
+    transform: perspective(300px) rotateY(0deg) translateX(0px);
+    margin-left: 40px;
+    margin-right: 30px;
 }
 
 .slider_b_element:hover~.slider_b_element {
-    transform: perspective(320px) rotateY(-20deg) translateX(20px);
+    transform: perspective(300px) rotateY(-15deg) translateX(20px);
 }
 
-.slider_b input[value="one"]:checked~.slider_b_wrapper .element_one {
-    transform: perspective(300px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
+.slider_b input[value="one"]:hover~.slider_b_wrapper .element_one {
+    transform: perspective(300px) rotateY(0deg) translateX(0px);
 }
 
-.slider_b input[value="two"]:checked~.slider_b_wrapper .element_two {
-    transform: perspective(300px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
+.slider_b input[value="two"]:hover~.slider_b_wrapper .element_two {
+    transform: perspective(300px) rotateY(0deg) translateX(0px);
 }
 
-.slider_b input[value="three"]:checked~.slider_b_wrapper .element_three {
-    transform: perspective(300px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
+.slider_b input[value="three"]:hover~.slider_b_wrapper .element_three {
+    transform: perspective(300px) rotateY(0deg) translateX(0px);
 }
 
-.slider_b input[value="four"]:checked~.slider_b_wrapper .element_four {
-    transform: perspective(300px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
+.slider_b input[value="four"]:hover~.slider_b_wrapper .element_four {
+    transform: perspective(300px) rotateY(0deg) translateX(0px);
 }
 
-.slider_b input[value="five"]:checked~.slider_b_wrapper .element_five {
-    transform: perspective(300px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
+.slider_b input[value="five"]:hover~.slider_b_wrapper .element_five {
+    transform: perspective(300px) rotateY(0deg) translateX(0px);
 }
 
-
-input[type="radio"] {
-    appearance: none;
-    -webkit-appearance: none;
-
-    width: 22px;
-    height: 22px;
-
-    margin-top: 30px;
-
-    border-radius: 50%;
-    background: var(--color-light-purple);
-}
-
-input[type="radio"]:checked {
-    background: var(--color-purple);
-    width: 40px;
-    border-radius: 20px;
-}
 li {
     font-size: 24px;
 }
@@ -134,6 +119,43 @@ li {
 
 @media screen and (max-width:960px) {
 
+    input[type="radio"] {
+        appearance: none;
+        -webkit-appearance: none;
+
+        width: 22px;
+        height: 22px;
+
+        margin-top: 30px;
+
+        border-radius: 50%;
+        background: var(--color-light-purple);
+    }
+
+    input[type="radio"]:checked {
+        background: var(--color-purple);
+        width: 40px;
+        border-radius: 20px;
+    }
+
+    .slider_b {
+        overflow: hidden;
+
+        height: 440px;
+        width: 100%;
+        max-width: 340px;
+
+    }
+
+    .slider_b img {
+        margin: 0px 30px;
+
+        max-height: 300px;
+        height: 90%;
+        max-width: 200px;
+        width: 50%;
+    }
+
     .slider_b input {
         display: block;
         pointer-events: auto;
@@ -142,51 +164,57 @@ li {
     .slider_b_element {
         position: relative;
         left: 40%;
-    } 
 
-    .slider_b_element:checked~.slider_b_element {
-        transform: perspective(320px) rotateY(-20deg) translateX(20px);
+        transform: perspective(300px) rotateY(-20deg) translateX(0px);
     }
 
-    .slider_b input[value="one"]:checked~.slider_b_wrapper .element_one {
-        transform: perspective(300px) rotateY(0deg) translateX(calc(0% /5)) scaleX(1.5) scaleY(1.2);
+    .slider_b_wrapper {
+        transition: all 250ms ease-in-out;
     }
 
-        .slider_b input[value="two"]:checked~.slider_b_wrapper .element_two {
-        transform: perspective(300px) rotateY(0deg) translateX(calc(50% /5)) scaleX(1.5) scaleY(1.2);
+    /* Rechts vom Mittigen Bild*/
+
+    .slider_b input[value="one"]:checked~.slider_b_wrapper {
+        transform: perspective(300px) rotateY(0deg) translateX(75%);
     }
 
-        .slider_b input[value="three"]:checked~.slider_b_wrapper .element_three {
-        transform: perspective(300px) rotateY(0deg) translateX(calc(150% /5)) scaleX(1.5) scaleY(1.2);
+    .slider_b input[value="two"]:checked~.slider_b_wrapper {
+        transform: perspective(300px) rotateY(0deg) translateX(22%);
     }
 
-        .slider_b input[value="four"]:checked~.slider_b_wrapper .element_four {
-        transform: perspective(300px) rotateY(0deg) translateX(calc(200% /5)) scaleX(1.5) scaleY(1.2);
+    .slider_b input[value="three"]:checked~.slider_b_wrapper {
+        transform: perspective(300px) rotateY(0deg) translateX(-30%);
     }
 
-        .slider_b input[value="five"]:checked~.slider_b_wrapper .element_five {
-        transform: perspective(300px) rotateY(0deg) translateX(calc(250% /5)) scaleX(1.5) scaleY(1.2);
+    .slider_b input[value="four"]:checked~.slider_b_wrapper {
+        transform: perspective(300px) rotateY(0deg) translateX(-82%);
     }
-/*
-        .slider_b input[value="one"]:not(:checked)~.slider_b_wrapper .element_one {
-       transform: perspective(320px) rotateY(20deg) translateX(calc(-250% /5))
+
+    .slider_b input[value="five"]:checked~.slider_b_wrapper {
+        transform: perspective(300px) rotateY(0deg) translateX(-135%);
     }
-        .slider_b input[value="two"]:not(:checked)~.slider_b_wrapper .element_two {
-        transform: perspective(320px) rotateY(20deg) translateX(calc(-300% /5))
+
+
+    /* links vom Mittigen Bild*/
+    .slider_b input[value="two"]:checked~.slider_b_wrapper .slider_b_element:has(~ .element_two) {
+        transform: perspective(300px) rotateY(20deg) translateX(0%);
     }
-        .slider_b input[value="three"]:not(:checked)~.slider_b_wrapper .element_three {
-        transform: perspective(320px) rotateY(20deg) translateX(calc(-350% /5))
+
+    .slider_b input[value="three"]:checked~.slider_b_wrapper .slider_b_element:has(~ .element_three) {
+        transform: perspective(300px) rotateY(20deg) translateX(0%);
     }
-        .slider_b input[value="four"]:not(:checked)~.slider_b_wrapper .element_four {
-        transform: perspective(320px) rotateY(20deg) translateX(calc(-400% /5))
+
+    .slider_b input[value="four"]:checked~.slider_b_wrapper .slider_b_element:has(~ .element_four) {
+        transform: perspective(300px) rotateY(20deg) translateX(0%);
     }
-        .slider_b input[value="five"]:not(:checked)~.slider_b_wrapper .element_five {
-        transform: perspective(320px) rotateY(20deg) translateX(calc(-450% /5))
+
+    .slider_b input[value="five"]:checked~.slider_b_wrapper .slider_b_element:has(~ .element_five) {
+        transform: perspective(300px) rotateY(20deg) translateX(0%);
     }
-*/
+
+
+
     .slider_b_element:not(.nohover) {
         pointer-events: none;
     }
-
-
 }
