@@ -19,11 +19,12 @@
     max-width: 1300px;
 
     display: flex;
-    flex-wrap: wrap;
-    /* Inputs rutschen in eine zweite Zeile */
+    flex-wrap: wrap;   /* Inputs rutschen in eine zweite Zeile */
     justify-content: center;
     align-items: center;
     gap: 16px 10px;
+
+    padding-bottom: 24px;
 }
 
 /* Desktop: Radios sind versteckt */
@@ -35,10 +36,8 @@
 .slider_b_wrapper {
     position: relative;
     z-index: 1;
-    order: -1;
-    /* Wrapper ist unter den bildern die Inputs */
-    height: clamp(250px, 35vw, 440px);
-    /* Höhe jetzt hier statt auf .slider_b */
+    order: -1;   /* Wrapper ist unter den bildern die Inputs */
+    height: clamp(250px, 35vw, 440px); /* Höhe jetzt hier statt auf .slider_b */
 
     display: flex;
     justify-content: center;
@@ -106,6 +105,10 @@
 
 .slider_b input[value="five"]:hover~.slider_b_wrapper .element_five {
     transform: perspective(300px) rotateY(0deg) translateX(0px);
+}
+
+.text_info li {
+        padding-bottom: 10px;
 }
 
 li {
