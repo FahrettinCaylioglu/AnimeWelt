@@ -389,7 +389,7 @@
 
 .element_one {
     background-image: url(../assets/images/spy-family.png);
-    background-size: 100% 100%;
+    background-size: cover,contain;
     background-position: center;
     background-repeat: no-repeat;
 
@@ -397,7 +397,7 @@
 
 .element_two {
     background-image: url(../assets/images/DragonBall.jpg);
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
@@ -405,7 +405,7 @@
 
 .element_three {
     background-image: url(../assets/images/OnePieceCrew.jpg);
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
@@ -413,7 +413,7 @@
 
 .element_four {
     background-image: url(../assets/images/Naruto.jpg);
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
