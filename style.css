@@ -389,7 +389,7 @@
 
 .element_one {
     background-image: url(../assets/images/spy-family.png);
-    background-size: cover,contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
