@@ -573,7 +573,7 @@ input[type="checkbox"] {
 
     /* Kleiner Pfeil */
     .arrow_button_box>img {
-        content: url("../assets/icons/pfeil_klein.png");
+        content: url("./assets/icons/pfeil_klein.png");
 
         position: absolute;
         width: 65px;
