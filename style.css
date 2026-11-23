@@ -163,7 +163,7 @@
     z-index: 5;
 
     padding-left: 50px;
-    gap: 32px;
+    /* gap: 32px; */
 
     transform-origin: 50% 50%;
     animation: einblenden 3.5s ease-in-out forwards;
